@@ -1,0 +1,82 @@
+@import '~bootstrap/scss/bootstrap.scss';
+@import '../../styles/global.scss';
+
+
+body 
+{
+            font-family: 'Noto Serif TC', serif;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        height: 400vh;
+    background: linear-gradient(to top, #FDD2BB 0%, #F7F7EE 8%);
+    background-size: cover;
+}
+
+.wrap {
+            width: 100%;
+            height: 10px;
+            background-color: transparent;
+            position: fixed;
+        }
+
+        .box {
+            background-color: #FDD2BB;
+            height: 10px;
+            width: 100%;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .container img {
+            width: 80%;
+        }
+
+        .title {
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .title h3 {
+            background-color: #F7F7EE;
+            /* border: 1px black solid; */
+            position: absolute;
+            bottom: 60px;
+            width: 600px;
+            padding: 50px;
+            right: 600px;
+
+        }
+
+        .title img {
+            width: 300px;
+            position: absolute;
+            bottom: 80px;
+            right: 650px;
+            z-index: 1;
+        }
+
+        .author-date {
+            // margin: auto;
+            width:fit-content;
+            position: absolute;
+            background-color: #F7F7EE;
+            bottom: 0px;
+            right: 500px;
+            padding: 15px 30px;
+        }
+
+        .content p {
+            padding: 20px;
+            text-align: left;
+            /* letter-spacing: 1.5px; */
+            line-height: 30px;
+            /* font-size: 20px; */
+        }
+
+        .content img {
+            width: 80%;
+            padding: 50px;
+        }
