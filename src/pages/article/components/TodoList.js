@@ -13,10 +13,11 @@ function TodoList(props) {
 
   return (
     <>
-      <ul>
+      <ul >
         {todos.map((todoItem, i) => {
           return todoItem.edited ? (
             <TodoItemEditForm
+            
               key={todoItem.id}
               handleEdited={handleEdited}
               todoItem={todoItem}
@@ -24,6 +25,7 @@ function TodoList(props) {
             />
           ) : (
             <TodoItem
+            
               key={todoItem.id}
               todoItem={todoItem}
               handleCompleted={handleCompleted}

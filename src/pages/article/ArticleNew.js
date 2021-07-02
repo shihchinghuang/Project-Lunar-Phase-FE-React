@@ -1,6 +1,7 @@
 import React from 'react'
 import './articleNew.scss'
-import ArticleCard from '../../components/ArticleCard.js'
+import ArticleCard from '../article/components/ArticleCard.js'
+
 
 
 const ArticleNew = () => {

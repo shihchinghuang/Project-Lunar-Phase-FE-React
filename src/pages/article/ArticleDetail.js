@@ -2,38 +2,49 @@ import React from 'react'
 import './articleDetail.scss'
 // import $ from 'jquery'
 // import ArticleDetailJquery from '.../components/ArticleDetailJquery.js'
-import TodoApp from '../../components/TodoApp.js'
-import ArticleCard from '../../components/ArticleCard.js'
-import ArticleDetailJquery from '../../components/ArticleDetailJquery.js'
-
+import TodoApp from './components/TodoApp.js'
+import ArticleCard from './components/ArticleCard.js'
+import ArticleDetailJquery from './components/ArticleDetailJquery.js'
+import ProgressBar from "react-scroll-progress-bar";
+// https://www.npmjs.com/package/react-scroll-progress-bar
+import { RiBookmarkFill } from 'react-icons/ri'
+import { TiSocialFacebook } from 'react-icons/ti'
+import { AiOutlineInstagram } from 'react-icons/ai'
+import Navi from './components/Navi.js'
 
 
 const ArticleDetail = () => {
   return (
     
     <>
-
+<Navi />
 <div>
-        <div className="wrap"> 
+<ProgressBar height="15px" bgcolor="#FDD2BB"/>
+        {/* <div className="wrap"> 
           <div className="box" />
-        </div>
+        </div> */}
         <div className="container">
-          <img src="./img/Image 17.png" alt="" />
+          <img src="./img/Image 17.png" className="w-100"alt="" />
           <div className="title">
             <h3>女人生命中長時間相伴的「好朋友」，三種友善地球的永續生理期用品</h3>
             <img src="./bg-svg/Path 534.svg" alt="" />
             <div className="author-date">
-              <h6 className="m-0">女人迷</h6>
-              <h6 className="m-0">2021-06-05</h6>
+              <p className="m-0">女人迷</p>
+              <small className="m-0">2021-06-05</small>
             </div>
           </div>
         </div>
         <div className="container">
-          <div className="fontSize">
-            <button className="font jq-large">大</button>
-            <button className="font jq-medium">中</button>
-            <button className="font jq-small">小</button>
-          </div>
+       <div className="d-flex justify-content-between">
+       <div className="ml-4">
+       <ArticleDetailJquery  />
+</div>
+<div className="mr-4">
+<RiBookmarkFill className="h4 mr-4" />
+<TiSocialFacebook className="h3 mr-4" />
+<AiOutlineInstagram className="h3 mr-4" />
+</div>
+       </div>
           <div className="content">
 
 

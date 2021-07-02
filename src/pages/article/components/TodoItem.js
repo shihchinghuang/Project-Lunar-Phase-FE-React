@@ -1,5 +1,10 @@
-import React from 'react'
+import React, { useState }  from 'react'
 import 'react-bootstrap'
+import { BiEdit } from 'react-icons/bi';
+import { AiOutlineDelete } from 'react-icons/ai';
+import { FcLike } from 'react-icons/fc';
+// React Icons
+// import { ArticleLikeBtn } from './ArticleLikeBtn.js'
 
 function TodoItem(props) {
   const {
@@ -9,6 +14,8 @@ function TodoItem(props) {
     handleDelete,
     handleEdited,
   } = props
+
+  const [total, setTotal] = useState(0)
 
   return (
     <>
@@ -20,8 +27,10 @@ function TodoItem(props) {
     <small>2021-06-21</small>
     </div>
     </div>
-    <div className="d-flex justify-content-between border-bottom pb-5 mb-5">
-      <div className="my-auto ">
+    <div className="border-bottom pb-5 mb-5">
+    
+      <div className="d-flex justify-content-between">
+      <div className="my-auto">
       <li className="pl-5 ml-5">
       {/* 打勾的部分 */}
         {/* <input
@@ -37,29 +46,36 @@ function TodoItem(props) {
           todoItem.text
         )}
         </li>
+        
       </div>
         <div className="my-auto">
-        <button
-          className="btn btn-primary mr-3"
-          onClick={() => {
+
+        <BiEdit className="mr-3 h3"  onClick={() => {
             handleEdited(todoItem.id)
-          }}
-        >
-          編輯
-        </button>
-        <button
-          className="btn btn-danger"
+          }}/>
+      <AiOutlineDelete className="h3"
           onClick={() => {
             handleDelete(todoItem.id)
-          }}
-        >
-          刪除
-        </button>
+          }}/>
+        
+        
         </div>
       </div>
+      <div className="text-left ml-5 pt-4 d-flex">
+      <FcLike  className="h5 ml-5 mr-4" onClick={() => {
+        setTotal(total + 1)
+      }}/>
+      <p>
+      {total}
+    </p>
+      </div>
+      {/* <ArticleLikeBtn /> */}
+      </div>
+      
       
     </>
   )
 }
 
 export default TodoItem
+

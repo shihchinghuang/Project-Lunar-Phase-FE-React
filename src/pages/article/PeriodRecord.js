@@ -3,8 +3,8 @@ import { useState, useEffect,useRef } from "react";
 
 
 import React from "react";
-import List from "../../components/List.js";
-import Edit from "../../components/Edit.js";
+import List from "../article/components/List.js";
+import Edit from "../article/components/Edit.js";
 import "./PeriodRecord.css";
 
 export const API_HOST="http://localhost:3000"

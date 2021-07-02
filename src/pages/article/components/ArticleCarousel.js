@@ -6,18 +6,22 @@ import './articleCarousel.scss'
 // https://react-bootstrap.github.io/components/carousel/
 
 function ArticleCarousel() {
-  
+  const style = {
+    overflow:'visible'
+  };
+
+
   return (
     <>
-      <Carousel>
-  <Carousel.Item>
+      <Carousel style={style}>
+  <Carousel.Item style={style}>
     <img
       className="d-block w-100"
       src="./img/Image 7.png"
       alt="First slide"
     />
-   <Carousel.Caption className="caption">
-      <h3 className="title">[第一張] 馬來西亞的性別平權，崩壞始於教育：校園長年「月經檢查」、教師拿「強暴」開玩笑</h3>
+   <Carousel.Caption className="caption" style={style}>
+      <h3 className="title" style={style}>[第一張] 馬來西亞的性別平權，崩壞始於教育：校園長年「月經檢查」、教師拿「強暴」開玩笑</h3>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
