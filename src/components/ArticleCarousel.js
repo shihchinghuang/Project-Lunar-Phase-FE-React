@@ -28,7 +28,7 @@ function ArticleCarousel() {
     />
 
 <Carousel.Caption className="caption">
-      <h3 className="title">[第一張] 馬來西亞的性別平權，崩壞始於教育：校園長年「月經檢查」、教師拿「強暴」開玩笑</h3>
+      <h3 className="title">[第二張] 馬來西亞的性別平權，崩壞始於教育：校園長年「月經檢查」、教師拿「強暴」開玩笑</h3>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -39,7 +39,7 @@ function ArticleCarousel() {
     />
 
 <Carousel.Caption className="caption">
-      <h3 className="title">[第一張] 馬來西亞的性別平權，崩壞始於教育：校園長年「月經檢查」、教師拿「強暴」開玩笑</h3>
+      <h3 className="title">[第三張] 馬來西亞的性別平權，崩壞始於教育：校園長年「月經檢查」、教師拿「強暴」開玩笑</h3>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>

@@ -1,5 +1,6 @@
 import React from 'react'
-import {CardDeck, Card} from 'react-bootstrap'
+import {CardDeck,Card} from 'react-bootstrap'
+
 
 
 const ArticleCard =()=>{
@@ -8,6 +9,8 @@ return(
     <>
 <CardDeck className="container m-auto">
   <Card>
+
+
     <Card.Img className="w-100" src="./img/gmnmma8s7qsygbr4wx7h4h47dqnc25.jpeg" />
     <Card.Body>
       <Card.Title className="text-left">染了經血的內褲廣告文案，折射出一片情感與身體教育的枯燥沙漠</Card.Title>
@@ -23,8 +26,14 @@ return(
     {/* <Card.Footer>
       <small className="text-muted">Last updated 3 mins ago</small>
     </Card.Footer> */}
+
+
   </Card>
+
+
   <Card>
+
+
     <Card.Img className="w-100" src="./img/gmnmma8s7qsygbr4wx7h4h47dqnc25.jpeg" />
     <Card.Body>
       <Card.Title className="text-left">染了經血的內褲廣告文案，折射出一片情感與身體教育的枯燥沙漠</Card.Title>
@@ -40,8 +49,13 @@ return(
     {/* <Card.Footer>
       <small className="text-muted">Last updated 3 mins ago</small>
     </Card.Footer> */}
+
+
   </Card>
+
   <Card>
+
+
     <Card.Img className="w-100" src="./img/gmnmma8s7qsygbr4wx7h4h47dqnc25.jpeg" />
     <Card.Body>
       <Card.Title className="text-left">染了經血的內褲廣告文案，折射出一片情感與身體教育的枯燥沙漠</Card.Title>
@@ -57,7 +71,10 @@ return(
     {/* <Card.Footer>
       <small className="text-muted">Last updated 3 mins ago</small>
     </Card.Footer> */}
+ 
+
   </Card>
+
 </CardDeck>
 </>
 )

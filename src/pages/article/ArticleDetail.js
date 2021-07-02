@@ -9,8 +9,6 @@ import ArticleDetailJquery from '../../components/ArticleDetailJquery.js'
 
 
 const ArticleDetail = () => {
-
-
   return (
     
     <>
