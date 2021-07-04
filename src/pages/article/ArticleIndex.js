@@ -1,7 +1,7 @@
 import React from "react";
 import "./articleIndex.scss";
 import "react-bootstrap";
-import Navi from "../article/components/Navi.js";
+// import LunarPhaseHeader from "../article/components/LunarPhaseHeader.js";
 import ArticleCard from "../article/components/ArticleCard.js";
 import ArticleCategory from "../article/components/ArticleCategory.js";
 import ArticleCarousel from "../article/components/ArticleCarousel.js";
@@ -14,7 +14,7 @@ const ArticleIndex = () => {
   return (
     <>
       <div className="index">
-        <Navi />
+        {/* <LunarPhaseHeader /> */}
         <ArticleCarousel />
         {/* 右邊svg開始 */}
         <div className="bg-icon-1">
@@ -22,8 +22,8 @@ const ArticleIndex = () => {
         </div>
         {/*右邊svg結束 */}
         {/* 第二頁最新文章區塊開始 */}
-        <div className="container">
-          <div className="new">
+        <div className="container mt-5">
+          <div className="new mt-5">
             <h3>- 最新文章 -</h3>
             <div className="line">
               <img src="./bg-svg/Path 549.svg" alt="" />
@@ -48,7 +48,6 @@ const ArticleIndex = () => {
             <button className="m-4 btn-soft-green-s">性別故事</button>
           </div>
           <ArticleCategory />
-
           <div className="more">
             <img src="./bg-svg/more-for-category.svg" alt="" />
           </div>
