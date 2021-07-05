@@ -8,8 +8,8 @@ import "./articleCarousel.scss";
 function ArticleCarousel() {
   return (
     <>
-      <Carousel className="carousel">
-        <Carousel.Item>
+      <Carousel>
+        <Carousel.Item className="carousel">
           <img
             className="d-block w-100"
             src="./img/Image 7.png"

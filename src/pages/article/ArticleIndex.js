@@ -24,7 +24,7 @@ const ArticleIndex = () => {
         {/* 第二頁最新文章區塊開始 */}
         <div className="container mt-5">
           <div className="new mt-5">
-            <h3>- 最新文章 -</h3>
+            <h3 className="d-block">- 最新文章 -</h3>
             <div className="line">
               <img src="./bg-svg/Path 549.svg" alt="" />
             </div>
