@@ -97,11 +97,7 @@ const ArticleDetail = (props) => {
           <div className="title-svg text-center pt-5 mt-5">
             <h3>{article.articleName}</h3>
           </div>
-          <img
-            src="https://image1.thenewslens.com/2018/11/plsasr8h3vtdxno4wrtl7hpalbqsg1.jpg?auto=compress&h=648&q=80&w=1080"
-            className="w-100"
-            alt=""
-          />
+          <img src={article.articleImg} className="w-100" alt="" />
         </div>
         <div className="container">
           <div className="d-flex justify-content-between align-items-center my-5">
