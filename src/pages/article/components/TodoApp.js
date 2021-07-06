@@ -156,7 +156,15 @@ function TodoApp() {
         setTodoInput={setTodoInput}
         handleAddNew={handleAddNew}
       />
+      <div className="position-relative text-center">
+        <img
+          src="http://localhost:3000/bg-svg/Path 539.svg"
+          className="line3  w-50 position-absolute"
+          alt=""
+        />
+      </div>
       <TodoList
+        className="mt-5 pt-5"
         todos={todos}
         handleCompleted={handleCompleted}
         handleDelete={handleDelete}
