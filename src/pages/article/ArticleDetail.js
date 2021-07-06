@@ -19,22 +19,23 @@ const ArticleDetail = (props) => {
   console.log(props);
   var moment = require("moment");
 
-  const [article, setArticle] = useState([
-    {
-      // id: '',
-      // eventId: '',
-      // eventName: '',
-      // eventSubtitle: '',
-      // eventDate: '',
-      // eventDescription: '',
-      // eventLocation: '',
-      // eventImg: '',
-      // eventPrice: '0',
-      // eventCategory: '',
-      // created_at: '',
-      // updated_at: '',
-    },
-  ]);
+  const [article, setArticle] = useState({
+    id: "",
+    articleId: "",
+    articleName: "",
+    articleContent0: "",
+    articleContent1: "",
+    articleContent2: "",
+    articleContent3: "",
+    articleAuthor: "",
+    articleTagId: 0,
+    articleTag: "",
+    articleCategory: "",
+    article_like: 0,
+    articleImg: [],
+    created_at: "1970-01-01",
+    updated_at: "1970-01-01",
+  });
 
   const [dataLoading, setDataLoading] = useState(false);
 
@@ -45,7 +46,7 @@ const ArticleDetail = (props) => {
     // 連接的伺服器資料網址
     const id = props.match.params.id;
     const url = "http://localhost:6005/article/" + id;
-    // const url = 'http://localhost:6005/event/:id?'
+    // const url = "http://localhost:6005/article/:id?";
 
     // 注意header資料格式要設定，伺服器才知道是json格式
     const request = new Request(url, {
@@ -59,7 +60,7 @@ const ArticleDetail = (props) => {
     const data = await response.json();
     console.log(data);
     // 設定資料
-    setArticle(data);
+    setArticle(data.data);
     console.log();
   }
   useEffect(() => {
@@ -71,11 +72,11 @@ const ArticleDetail = (props) => {
   }, []);
 
   // 每次users資料有變動就會X秒後關掉載入指示
-  useEffect(() => {
-    setTimeout(() => {
-      setDataLoading(false);
-    }, 1000);
-  }, [article]);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setDataLoading(false);
+  //   }, 1000);
+  // }, [article]);
 
   const loading = (
     <>
@@ -97,12 +98,12 @@ const ArticleDetail = (props) => {
         <div className="container">
           <img src="./img/Image 17.png" className="w-100" alt="" />
           <div className="title">
-            <h3>{article.articleName}</h3>
+            <h3>{article && article.articleName}</h3>
             <img src="./bg-svg/Path 534.svg" alt="" />
             <div className="author-date">
-              <p className="m-0">{article.articleAuthor}</p>
+              <p className="m-0">{article && article.articleAuthor}</p>
               <small className="m-0">
-                {moment(article.articleDate).format("YYYY-MM-DD")}
+                {moment(article && article.articleDate).format("YYYY-MM-DD")}
               </small>
             </div>
           </div>
@@ -120,7 +121,7 @@ const ArticleDetail = (props) => {
           </div>
           <div className="content">
             <img src="./bg-svg/Group 1120.png" alt="" />
-            <p>{article.articleContent0}</p>
+            <p>{article && article.articleContent0}</p>
           </div>
         </div>
         <div className="article-recommand container mb-5">
