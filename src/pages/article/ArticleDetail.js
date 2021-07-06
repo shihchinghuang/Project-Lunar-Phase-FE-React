@@ -10,6 +10,7 @@ import ProgressBar from "react-scroll-progress-bar";
 import { RiBookmarkFill } from "react-icons/ri";
 import { TiSocialFacebook } from "react-icons/ti";
 import { AiOutlineInstagram } from "react-icons/ai";
+import axios from "axios";
 // import Navi from "./components/Navi.js";
 
 // const sessionServer = async () => {
@@ -29,6 +30,7 @@ import { AiOutlineInstagram } from "react-icons/ai";
 
 const ArticleDetail = (prop) => {
   const [article, setArticle] = useState([]);
+  const [id, setId] = useState(2);
   const [dataLoading, setDataLoading] = useState(false);
   var moment = require("moment");
 
@@ -65,6 +67,18 @@ const ArticleDetail = (prop) => {
       setDataLoading(false);
     }, 1000);
   }, [article]);
+
+  useEffect(() => {
+    axios
+      .get(`http://localhost:6005/article/${id}`)
+      .then((res) => {
+        console.log(res);
+        setArticle(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
 
   return (
     <>
