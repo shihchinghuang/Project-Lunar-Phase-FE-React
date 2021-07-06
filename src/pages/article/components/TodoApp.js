@@ -164,7 +164,6 @@ function TodoApp() {
         />
       </div>
       <TodoList
-        className="mt-5 pt-5"
         todos={todos}
         handleCompleted={handleCompleted}
         handleDelete={handleDelete}
