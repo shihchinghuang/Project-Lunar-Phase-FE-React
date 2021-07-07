@@ -48,22 +48,23 @@ function ArticleCarousel() {
           </a>
         </Carousel.Item>
         <Carousel.Item>
-          <img
-            className="d-block w-100"
-            style={{
-              height: "600px",
-              objectFit: "cover",
-            }}
-            src="./img/woman-bathtub_CUGFVFAI24.jpeg"
-            alt="Third slide"
-          />
+          <a href="http://localhost:3000/articledetail/41">
+            <img
+              className="d-block w-100"
+              style={{
+                height: "600px",
+                objectFit: "cover",
+              }}
+              src="https://heho.com.tw/wp-content/uploads/2019/10/191005-%E7%94%9F%E7%90%86%E6%9C%9F%E7%94%A8%E5%93%81.png"
+              alt="Third slide"
+            />
 
-          <Carousel.Caption className="caption  carousel-inner">
-            <h3 className="title">
-              [第三張]
-              馬來西亞的性別平權，崩壞始於教育：校園長年「月經檢查」、教師拿「強暴」開玩笑
-            </h3>
-          </Carousel.Caption>
+            <Carousel.Caption className="caption  carousel-inner">
+              <h3 className="title">
+                衛生棉、棉條還是月亮杯？優缺點超級比一比！
+              </h3>
+            </Carousel.Caption>
+          </a>
         </Carousel.Item>
       </Carousel>
     </>
