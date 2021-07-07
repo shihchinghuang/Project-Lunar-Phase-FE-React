@@ -8,7 +8,6 @@ import ProgressBar from "react-scroll-progress-bar";
 import { RiBookmarkFill } from "react-icons/ri";
 import { TiSocialFacebook } from "react-icons/ti";
 import { AiOutlineInstagram } from "react-icons/ai";
-import axios from "axios";
 // import Navi from "./components/Navi.js";
 
 import { withRouter } from "react-router-dom";
@@ -93,14 +92,14 @@ const ArticleDetail = (props) => {
       <div>
         <ProgressBar height="15px" bgcolor="#FDD2BB" />
 
-        <div className="container">
-          <div className="title-svg text-center pt-5 mt-5">
+        <div className="container title-svg">
+          <div className="text-center pt-5 mt-5">
             <h3>{article.articleName}</h3>
           </div>
           <img src={article.articleImg} className="w-100" alt="" />
         </div>
-        <div className="container">
-          <div className="d-flex justify-content-between align-items-center my-5">
+        <div className="container ">
+          <div className="d-flex justify-content-between align-items-center my-5 border-bottom pb-5">
             <div className="ml-4">
               <ArticleDetailJquery />
             </div>

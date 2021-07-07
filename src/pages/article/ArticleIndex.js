@@ -35,7 +35,9 @@ const ArticleIndex = () => {
           <ArticleCard />
 
           <div className="more">
-            <img src="./bg-svg/more-for-new.svg" alt="" />
+            <a href="http://localhost:3000/articlenew">
+              <img src="./bg-svg/more-for-new.svg" alt="" />
+            </a>
           </div>
         </div>
         {/* 尚未完成：左右箭頭輪播，作者日期無法靠下 */}

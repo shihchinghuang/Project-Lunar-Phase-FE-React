@@ -5,8 +5,8 @@ import ArticleCard from "../article/components/ArticleCard.js";
 const ArticleNew = () => {
   return (
     <>
-      <div className="container">
-        <div className="new">
+      <div className="container pt-5">
+        <div className="new  mt-5">
           <h3>- 最新文章 -</h3>
         </div>
 
