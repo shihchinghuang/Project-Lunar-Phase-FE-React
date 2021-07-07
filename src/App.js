@@ -7,6 +7,7 @@ import ArticleIndex from "./pages/article/ArticleIndex.js";
 import ArticleNew from "./pages/article/ArticleNew.js";
 import ArticleDetail from "./pages/article/ArticleDetail.js";
 import PeriodRecord from "./pages/article/PeriodRecord.js";
+import Home from "./pages/Home.js";
 
 // import TodoApp from './components/TodoApp'
 
@@ -17,7 +18,7 @@ const App = () => {
       <>
         {/* 連結表，後續會轉為選單 */}
         {/* 使用a與href有可能會導致頁面刷新，元件會重新回恢初始狀態，導致應用程式的運作失常，所以請儘可能用Link元件 */}
-        <Link to="/">ArticleIndex</Link>
+        <Link to="/article">ArticleIndex</Link>
         <Link to="/articlenew">ArticleNew</Link>
         <Link to="/articledetail">ArticleDetail</Link>
         <Link to="/periodrecord">PeriodRecord</Link>
@@ -34,9 +35,13 @@ const App = () => {
             <PeriodRecord />
           </Route>
 
-          {/* 有exact代表網站首頁，exact代表精確比對，只有一個斜線才會成為首頁 */}
-          <Route exact path="/">
+          <Route path="/article">
             <ArticleIndex />
+          </Route>
+          {/* 有exact代表網站首頁，exact代表精確比對，只有一個斜線才會成為首頁 */}
+
+          <Route exact path="/">
+            <Home />
           </Route>
         </Switch>
       </>

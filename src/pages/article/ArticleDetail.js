@@ -96,7 +96,12 @@ const ArticleDetail = (props) => {
           <div className="text-center pt-5 mt-5">
             <h3>{article.articleName}</h3>
           </div>
-          <img src={article.articleImg} className="w-100" alt="" />
+          <img
+            src={article.articleImg}
+            className="w-100"
+            style={{ height: "660px", objectFit: "cover" }}
+            alt=""
+          />
         </div>
         <div className="container ">
           <div className="d-flex justify-content-between align-items-center my-5 border-bottom pb-5">
