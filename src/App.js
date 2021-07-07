@@ -20,7 +20,7 @@ const App = () => {
         {/* 使用a與href有可能會導致頁面刷新，元件會重新回恢初始狀態，導致應用程式的運作失常，所以請儘可能用Link元件 */}
         <Link to="/article">ArticleIndex</Link>
         <Link to="/articlenew">ArticleNew</Link>
-        <Link to="/articledetail">ArticleDetail</Link>
+        <Link to="/articledetail/2">ArticleDetail</Link>
         <Link to="/periodrecord">PeriodRecord</Link>
 
         {/* 路由表 */}
