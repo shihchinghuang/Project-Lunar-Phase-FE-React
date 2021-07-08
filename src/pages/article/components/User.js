@@ -8,7 +8,8 @@ import { withRouter } from "react-router-dom";
 function User(props) {
   const [article, setArticle] = useState([]);
   const [dataLoading, setDataLoading] = useState(false);
-  const [displayArticle, setdisplayArticle] = useState([]); //篩過之後的資料
+  const [displayArticle, setDisplayArticle] = useState([]); //篩過之後的資料
+  var moment = require("moment");
 
   async function getArticleFromServer() {
     // 開啟載入指示
@@ -31,9 +32,10 @@ function User(props) {
     console.log(data);
     // 設定資料
     setArticle(data.data);
+    setDisplayArticle(data.data);
   }
 
-  async function deletcArticleFromServer(id) {
+  async function deleteArticleFromServer(id) {
     // 開啟載入指示
     setDataLoading(true);
 
@@ -115,23 +117,25 @@ function User(props) {
         return (
           <Card className="m-3">
             <a
-              href={`http://localhost:3000/articledetail/${article.id}`}
+              href={`http://localhost:3000/articledetail/${v.id}`}
               style={{ textDecoration: "none" }}
             >
               <Card.Img
                 className="w-100 "
                 style={{ height: "200px", objectFit: "cover" }}
-                // src={article.articleImg}
-                src="https://c1.staticflickr.com/5/4183/34238230142_a2a6fdb581_b.jpg"
+                src={v.articleImg}
+                // src="https://c1.staticflickr.com/5/4183/34238230142_a2a6fdb581_b.jpg"
               />
               <Card.Body>
                 <Card.Title className="text-left text-body">
                   {/* 第一次使用棉條就上手！寫給妳的全方位使用教學指南 */}
-                  {article.articleName}
+                  {v.articleName}
                 </Card.Title>
                 <div className="d-flex justify-content-between pt-4 text-body">
-                  <Card.Text>{article.articleAuthor}</Card.Text>
-                  <Card.Text>2021-02-03</Card.Text>
+                  <Card.Text>{v.articleAuthor}</Card.Text>
+                  <Card.Text>
+                    {moment(v.created_at).format("YYYY-MM-DD")}
+                  </Card.Text>
                 </div>
               </Card.Body>
             </a>
