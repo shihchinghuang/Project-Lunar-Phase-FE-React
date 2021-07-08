@@ -124,9 +124,9 @@ const ArticleDetail = (props) => {
             <p
               dangerouslySetInnerHTML={{ __html: article.articleContent0 }}
             ></p>
-            <div className="highlight text-center my-5">
+            <div className="highlight mx-auto text-center my-5">
               <img src="http://localhost:3000/bg-svg/Group 1120.png" alt="" />
-              <p>{article.articleHighlight}</p>
+              <p className="">{article.articleHighlight}</p>
             </div>
             <p
               dangerouslySetInnerHTML={{ __html: article.articleContent1 }}
