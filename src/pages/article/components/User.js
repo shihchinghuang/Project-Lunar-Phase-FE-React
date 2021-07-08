@@ -30,7 +30,7 @@ function User(props) {
     const data = await response.json();
     console.log(data);
     // 設定資料
-    setArticle(data);
+    setArticle(data.data);
   }
 
   async function deletcArticleFromServer(id) {
