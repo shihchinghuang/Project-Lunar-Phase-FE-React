@@ -1,28 +1,33 @@
 import React from "react";
 import "./articleNew.scss";
-import ArticleCard from "../article/components/ArticleCard.js";
+import ArticleNewCard from "../article/components/ArticleNewCard.js";
 
 const ArticleNew = () => {
   return (
     <>
       <div className="container pt-5">
-        <div className="new-new   mt-5">
-          <h3>- 最新文章 -</h3>
+        <div className="new-new text-center  mt-5">
+          <h3 className="">｜分類文章｜</h3>
+          <img src="./bg-svg/wave.svg" alt="" className="w-100" />
         </div>
 
         <div className="index d-flex justify-content-between">
-          <div className="left">
+          <div className="left mr-auto">
             <div className="d-flex align-items-center mb-4">
               <img src="./bg-svg/Path 515.svg" className="mr-3" alt="" />
-              <p className="m-0 red">最新文章</p>
+              <p className="m-0 red">衛教文章</p>
             </div>
-            <div className="d-flex align-items-center">
-              <img className="mr-3" src="./bg-svg/Path 515.svg" alt="" />
-              <p className="m-0">分類文章</p>
+            <div className="d-flex align-items-center mb-4">
+              <img src="./bg-svg/Path 515.svg" className="mr-3" alt="" />
+              <p className="m-0">性教育</p>
+            </div>
+            <div className="d-flex align-items-center mb-4">
+              <img src="./bg-svg/Path 515.svg" className="mr-3" alt="" />
+              <p className="m-0">性別故事</p>
             </div>
           </div>
           <div className="right">
-            <ArticleCard />
+            <ArticleNewCard />
           </div>
         </div>
       </div>
