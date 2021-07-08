@@ -28,13 +28,15 @@
 	img {
 		width: 800px;
 		position: absolute;
+		top: 0;
+		left: 1000px;
 		margin: 250px 0 0 0;
 		z-index: -1;
 	}
 }
 .carousel {
 	width: 72.3%;
-	float: left;
+	// float: left;
 }
 .title {
 	width: 600px;
@@ -48,9 +50,10 @@
 }
 .new {
 	width: fit-content;
-	margin-top: 230px;
+	margin-top: -50px;
 	margin-left: auto;
 	margin-right: auto;
+	
 	h3 {
 		letter-spacing: 2px;
 		text-align: center;
@@ -63,7 +66,7 @@
 .line {
 	margin:auto;
 	margin-bottom: 50px;
-	width:400px;
+	// width:400px;
 }
 .card-body {
 	h5 {
@@ -75,7 +78,8 @@
 	vertical-align: text-bottom;
 }
 .more {
-	width:300px;
+	width:200px;
+margin-top: -50px;
 	margin-left:auto;
 }
 .category {

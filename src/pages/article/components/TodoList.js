@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import TodoItem from "./TodoItem";
 import TodoItemEditForm from "./TodoItemEditForm";
+import { withRouter } from "react-router-dom";
 
 function TodoList(props) {
   const {
@@ -102,4 +103,4 @@ function TodoList(props) {
   );
 }
 
-export default TodoList;
+export default withRouter(TodoList);

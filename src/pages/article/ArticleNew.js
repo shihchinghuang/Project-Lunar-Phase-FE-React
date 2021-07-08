@@ -6,7 +6,7 @@ const ArticleNew = () => {
   return (
     <>
       <div className="container pt-5">
-        <div className="new  mt-5">
+        <div className="new-new   mt-5">
           <h3>- 最新文章 -</h3>
         </div>
 
