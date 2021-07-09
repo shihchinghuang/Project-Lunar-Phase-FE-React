@@ -16,7 +16,7 @@ function User(props) {
     setDataLoading(true);
 
     // 連接的伺服器資料網址
-    const url = "http://localhost:6005/article";
+    const url = `http://localhost:6005/article?orderBy=created_at-desc`;
 
     // 注意header資料格式要設定，伺服器才知道是json格式
     const request = new Request(url, {
