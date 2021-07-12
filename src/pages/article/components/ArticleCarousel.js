@@ -9,7 +9,7 @@ function ArticleCarousel() {
   return (
     <>
       {/* <div className="container"> */}
-      <Carousel className="carousel">
+      <Carousel>
         <Carousel.Item>
           <a href="http://localhost:3000/articledetail/2">
             <img
@@ -22,9 +22,8 @@ function ArticleCarousel() {
               src="https://images.pexels.com/photos/4239010/pexels-photo-4239010.jpeg"
               alt="First slide"
             />
-            <Carousel.Caption className="caption carousel-inner">
-              <div className="caption-bg"></div>
-              <h3 className="title">
+            <Carousel.Caption className="title">
+              <h3 className="">
                 女人生命中長時間相伴的「好朋友」，三種友善地球的永續生理期用品
               </h3>
             </Carousel.Caption>
@@ -42,8 +41,8 @@ function ArticleCarousel() {
               alt="Second slide"
             />
 
-            <Carousel.Caption className="caption  carousel-inner">
-              <h3 className="title">
+            <Carousel.Caption className="title">
+              <h3 className="">
                 瑞典學校性平教育將強化認知「合意文化」，不把性騷擾「正常化」
               </h3>
             </Carousel.Caption>
@@ -61,10 +60,8 @@ function ArticleCarousel() {
               alt="Third slide"
             />
 
-            <Carousel.Caption className="caption  carousel-inner">
-              <h3 className="title">
-                衛生棉、棉條還是月亮杯？優缺點超級比一比！
-              </h3>
+            <Carousel.Caption className="title">
+              <h3 className="">衛生棉、棉條還是月亮杯？優缺點超級比一比！</h3>
             </Carousel.Caption>
           </a>
         </Carousel.Item>

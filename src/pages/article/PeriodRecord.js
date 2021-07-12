@@ -44,7 +44,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="app w-50 mx-auto">
+      <div className="app mx-auto">
         <Edit add={setData} submittingStatus={submittingStatus} />
         <List
           listData={data}

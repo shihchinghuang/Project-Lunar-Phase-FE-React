@@ -11,19 +11,21 @@ const ArticleCard = () => {
             href="http://localhost:3000/articledetail/35"
             style={{ textDecoration: "none", color: "black" }}
           >
-            <img
-              className=" w-100 mb-3"
-              style={{ height: "230px", objectFit: "cover" }}
-              src="https://image1.thenewslens.com/2020/11/7l6wfj58259t97nyo418ydjummny89.jpg"
-              alt=""
-            />
-            <div className="title-wrap w-100">
-              <h5 className="mb-4">
-                第一次使用棉條就上手！寫給妳的全方位使用教學指南
-              </h5>
-              <div className="d-flex justify-content-between w-100">
-                <p>Audrey Ko</p>
-                <p>2021-02-03</p>
+            <div className="article-card-hover">
+              <img
+                className=" w-100 mb-3"
+                style={{ height: "230px", objectFit: "cover" }}
+                src="https://image1.thenewslens.com/2020/11/7l6wfj58259t97nyo418ydjummny89.jpg"
+                alt=""
+              />
+              <div className="title-wrap w-100">
+                <h5 className="mb-4">
+                  第一次使用棉條就上手！寫給妳的全方位使用教學指南
+                </h5>
+                <div className="d-flex justify-content-between w-100">
+                  <p>Audrey Ko</p>
+                  <p>2021-02-03</p>
+                </div>
               </div>
             </div>
           </a>
@@ -33,17 +35,21 @@ const ArticleCard = () => {
             href="http://localhost:3000/articledetail/24"
             style={{ textDecoration: "none", color: "black" }}
           >
-            <img
-              className=" w-100  mb-3"
-              style={{ height: "230px", objectFit: "cover" }}
-              src="https://castle.womany.net/images/content/pictures/33702/womany_mooncup_1441783172-29443-5169.jpg"
-              alt=""
-            />
-            <div className="title-wrap w-100">
-              <h5 className="mb-4">給你的寵愛身體懶人包：第一次月亮杯就上手</h5>
-              <div className="d-flex justify-content-between w-100">
-                <p>慢慢說</p>
-                <p>2021-02-03</p>
+            <div className="article-card-hover">
+              <img
+                className=" w-100  mb-3"
+                style={{ height: "230px", objectFit: "cover" }}
+                src="https://castle.womany.net/images/content/pictures/33702/womany_mooncup_1441783172-29443-5169.jpg"
+                alt=""
+              />
+              <div className="title-wrap w-100">
+                <h5 className="mb-4">
+                  給你的寵愛身體懶人包：第一次月亮杯就上手
+                </h5>
+                <div className="d-flex justify-content-between w-100">
+                  <p>慢慢說</p>
+                  <p>2021-02-03</p>
+                </div>
               </div>
             </div>
           </a>
@@ -53,19 +59,21 @@ const ArticleCard = () => {
             href="http://localhost:3000/articledetail/28"
             style={{ textDecoration: "none", color: "black" }}
           >
-            <img
-              className=" w-100 mb-3 "
-              style={{ height: "230px", objectFit: "cover" }}
-              src="https://pbs.twimg.com/media/EnoBjg2W8AU_U47?format=jpg&name=large"
-              alt=""
-            />
-            <div className="title-wrap w-100">
-              <h5 className="mb-4">
-                讓「月經貧窮」走入歷史，蘇格蘭議會通過「生理用品免費法案」
-              </h5>
-              <div className="d-flex justify-content-between w-100">
-                <p>中央社</p>
-                <p>2021-02-03</p>
+            <div className="article-card-hover">
+              <img
+                className=" w-100 mb-3 "
+                style={{ height: "230px", objectFit: "cover" }}
+                src="https://pbs.twimg.com/media/EnoBjg2W8AU_U47?format=jpg&name=large"
+                alt=""
+              />
+              <div className="title-wrap w-100">
+                <h5 className="mb-4">
+                  讓「月經貧窮」走入歷史，蘇格蘭議會通過「生理用品免費法案」
+                </h5>
+                <div className="d-flex justify-content-between w-100">
+                  <p>中央社</p>
+                  <p>2021-02-03</p>
+                </div>
               </div>
             </div>
           </a>

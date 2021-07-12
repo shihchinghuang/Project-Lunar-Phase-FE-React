@@ -28,6 +28,7 @@ const ArticleIndex = () => {
         <img
           src="./bg-svg/wave.svg"
           style={{
+            width: "100%",
             position: "absolute",
             top: "600px",
             right: "0px",
