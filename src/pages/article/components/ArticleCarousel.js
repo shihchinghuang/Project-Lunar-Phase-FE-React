@@ -8,8 +8,9 @@ import "./articleCarousel.scss";
 function ArticleCarousel() {
   return (
     <>
-      <Carousel>
-        <Carousel.Item className="carousel">
+      {/* <div className="container"> */}
+      <Carousel className="carousel">
+        <Carousel.Item>
           <a href="http://localhost:3000/articledetail/2">
             <img
               className="d-block w-100"
@@ -22,6 +23,7 @@ function ArticleCarousel() {
               alt="First slide"
             />
             <Carousel.Caption className="caption carousel-inner">
+              <div className="caption-bg"></div>
               <h3 className="title">
                 女人生命中長時間相伴的「好朋友」，三種友善地球的永續生理期用品
               </h3>
@@ -67,6 +69,7 @@ function ArticleCarousel() {
           </a>
         </Carousel.Item>
       </Carousel>
+      {/* </div> */}
     </>
   );
 }

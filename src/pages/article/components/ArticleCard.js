@@ -1,10 +1,77 @@
 import React from "react";
-import { CardDeck, Card } from "react-bootstrap";
+import "react-bootstrap";
+import "./articleCarousel.scss";
 
 const ArticleCard = () => {
   return (
     <>
-      <CardDeck className="container m-auto">
+      <div className="container d-flex m-auto border-top border-dark">
+        <div className="col-4 border-right border-dark  mt-3">
+          <a
+            href="http://localhost:3000/articledetail/35"
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <img
+              className=" w-100 mb-3"
+              style={{ height: "230px", objectFit: "cover" }}
+              src="https://image1.thenewslens.com/2020/11/7l6wfj58259t97nyo418ydjummny89.jpg"
+              alt=""
+            />
+            <div className="title-wrap w-100">
+              <h5 className="mb-4">
+                第一次使用棉條就上手！寫給妳的全方位使用教學指南
+              </h5>
+              <div className="d-flex justify-content-between w-100">
+                <p>Audrey Ko</p>
+                <p>2021-02-03</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div className="col-4 border-right border-dark mt-3">
+          <a
+            href="http://localhost:3000/articledetail/24"
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <img
+              className=" w-100  mb-3"
+              style={{ height: "230px", objectFit: "cover" }}
+              src="https://castle.womany.net/images/content/pictures/33702/womany_mooncup_1441783172-29443-5169.jpg"
+              alt=""
+            />
+            <div className="title-wrap w-100">
+              <h5 className="mb-4">給你的寵愛身體懶人包：第一次月亮杯就上手</h5>
+              <div className="d-flex justify-content-between w-100">
+                <p>慢慢說</p>
+                <p>2021-02-03</p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div className="col-4 mt-3">
+          <a
+            href="http://localhost:3000/articledetail/28"
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <img
+              className=" w-100 mb-3 "
+              style={{ height: "230px", objectFit: "cover" }}
+              src="https://pbs.twimg.com/media/EnoBjg2W8AU_U47?format=jpg&name=large"
+              alt=""
+            />
+            <div className="title-wrap w-100">
+              <h5 className="mb-4">
+                讓「月經貧窮」走入歷史，蘇格蘭議會通過「生理用品免費法案」
+              </h5>
+              <div className="d-flex justify-content-between w-100">
+                <p>中央社</p>
+                <p>2021-02-03</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      {/* <CardDeck className="container m-auto">
         <Card className="col-4">
           <a
             href="http://localhost:3000/articledetail/35"
@@ -46,9 +113,6 @@ const ArticleCard = () => {
                 <Card.Text>2021-06-14</Card.Text>
               </div>
             </Card.Body>
-            {/* <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
-    </Card.Footer> */}
           </a>
         </Card>
 
@@ -71,12 +135,9 @@ const ArticleCard = () => {
                 <Card.Text>2021-05-13</Card.Text>
               </div>
             </Card.Body>
-            {/* <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
-    </Card.Footer> */}
           </a>
         </Card>
-      </CardDeck>
+      </CardDeck> */}
     </>
   );
 };

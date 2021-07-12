@@ -1,10 +1,13 @@
  
  
  /* 輪播牆上的文章標題 */
+.carousel{
+    margin: auto;
+    position: relative;
 
+}
 
 .caption{
-    position: relative;
     overflow: visible;
 
 }
@@ -13,14 +16,46 @@
     line-height: 2;
     width: 500px;
     background-color: rgba(255, 255, 255, 0.5);
+    // background-color: transparent;
     position: absolute;
-    bottom: 300px;
-    right: center;
+    bottom: 100px;
+    margin: auto;
+    // right: calc(center + 250px);
     padding: 15px;
     text-align: left;
+    border-radius: 5px;
 }
+
+
+
+.col-4:hover{
+    // transform: scale(1.01);
+    background-color: #F7F7EE;
+    opacity: .3;
+    position: relative;
+}
+
+// .btn-read{
+//     opacity: 0;
+// }
+// .col-4:hover .btn-read{
+//     opacity: 1;
+//     // float: inline-start;
+//     right: 15px;
+// }
 
 .carousel-inner{
 overflow: visible !important;
 
 }
+
+// .caption-bg{
+//     width: 300px;
+//     height: 5px;
+//     background-color: blue;
+//     position: absolute;
+//     bottom: 300px;
+//     right: -150px;
+//     padding: 15px;
+//     z-index: 1;
+// }

@@ -34,7 +34,7 @@ const ArticleDetail = (props) => {
     updated_at: "1970-01-01",
   });
 
-  const [dataLoading, setDataLoading] = useState(false);
+  // const [dataLoading, setDataLoading] = useState(false);
 
   async function getArticleFromServer() {
     // 開啟載入指示
@@ -92,7 +92,7 @@ const ArticleDetail = (props) => {
       <div>
         <ProgressBar height="15px" bgcolor="#FDD2BB" />
 
-        <div className="container title-svg">
+        <div className=" title-svg">
           <div className="text-center pt-5 mt-5">
             <h3>{article.articleName}</h3>
           </div>

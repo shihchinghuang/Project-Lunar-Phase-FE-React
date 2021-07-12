@@ -108,7 +108,7 @@ function User(props) {
             </Card.Title>
             <div className="d-flex justify-content-between pt-4 text-body">
               <Card.Text>Audrey Ko</Card.Text>
-              <Card.Text>2021-02-03</Card.Text>
+              <Card.Text>2021-07-08</Card.Text>
             </div>
           </Card.Body>
         </a>
