@@ -28,6 +28,7 @@ const ArticleDetail = (props) => {
     articleTagId: 0,
     articleTag: "",
     articleCategory: "",
+    numberArticleCategory: "",
     article_like: 0,
     articleImg: [],
     created_at: "1970-01-01",
@@ -43,6 +44,7 @@ const ArticleDetail = (props) => {
     // 連接的伺服器資料網址
     const id = props.match.params.id;
     const url = "http://localhost:6005/article/" + id;
+
     // const url = "http://localhost:6005/article/:id?";
 
     // 注意header資料格式要設定，伺服器才知道是json格式

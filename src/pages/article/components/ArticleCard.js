@@ -8,7 +8,7 @@ const ArticleCard = () => {
       <div className="container d-flex m-auto border-top border-dark">
         <div className="col-4 border-right border-dark  mt-3">
           <a
-            href="http://localhost:3000/articledetail/35"
+            href="http://localhost:3000/article/detail/35"
             style={{ textDecoration: "none", color: "black" }}
           >
             <div className="article-card-hover">
@@ -32,7 +32,7 @@ const ArticleCard = () => {
         </div>
         <div className="col-4 border-right border-dark mt-3">
           <a
-            href="http://localhost:3000/articledetail/24"
+            href="http://localhost:3000/article/detail/24"
             style={{ textDecoration: "none", color: "black" }}
           >
             <div className="article-card-hover">
@@ -56,23 +56,21 @@ const ArticleCard = () => {
         </div>
         <div className="col-4 mt-3">
           <a
-            href="http://localhost:3000/articledetail/28"
+            href="http://localhost:3000/article/detail/48"
             style={{ textDecoration: "none", color: "black" }}
           >
             <div className="article-card-hover">
               <img
                 className=" w-100 mb-3 "
                 style={{ height: "230px", objectFit: "cover" }}
-                src="https://pbs.twimg.com/media/EnoBjg2W8AU_U47?format=jpg&name=large"
+                src="https://images.unsplash.com/photo-1445384763658-0400939829cd"
                 alt=""
               />
               <div className="title-wrap w-100">
-                <h5 className="mb-4">
-                  讓「月經貧窮」走入歷史，蘇格蘭議會通過「生理用品免費法案」
-                </h5>
+                <h5 className="mb-4">新種月事用品　溫柔對待你的「好朋友」</h5>
                 <div className="d-flex justify-content-between w-100">
-                  <p>中央社</p>
-                  <p>2021-02-03</p>
+                  <p>林以璿</p>
+                  <p>2021-06-07</p>
                 </div>
               </div>
             </div>

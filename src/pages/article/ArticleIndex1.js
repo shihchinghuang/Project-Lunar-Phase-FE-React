@@ -2,19 +2,20 @@ import React from "react";
 import "./articleIndex.scss";
 import "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
 
 // import LunarPhaseHeader from "../article/components/LunarPhaseHeader.js";
-import ArticleCard from "../article/components/ArticleCard.js";
-import App from "../article/components/App.js";
+import ArticleCard from "./components/ArticleCard.js";
+import App from "./components/App.js";
 // import ArticleCategory from "../article/components/ArticleCategory.js";
-import ArticleCarousel from "../article/components/ArticleCarousel.js";
+import ArticleCarousel from "./components/ArticleCarousel.js";
 // import InfiniteScroll from "../article/components/InfiniteScroll.js";
 import "../../styles/global.scss";
 
 // https://react-bootstrap.github.io/components/carousel/
 // https://ithelp.ithome.com.tw/articles/10227641
 
-const ArticleIndex = () => {
+const ArticleIndex1 = () => {
   return (
     <>
       <div className="index ">
@@ -46,17 +47,27 @@ const ArticleIndex = () => {
             <h3 className="text-center my-5">｜分類文章｜</h3>
           </div>
           <div className="container my-5">
-            <div className="my-5 w-100 border-top border-bottom border-dark ">
-              <div className="m-auto w-50 category d-flex justify-content-between p-3">
-                <a className="text-dark text-decoration-none" href>
-                  衛教文章
-                </a>
-                <a className="text-dark text-decoration-none" href>
-                  性教育
-                </a>
-                <a className="text-dark text-decoration-none" href>
-                  性別故事
-                </a>
+            <div className="w-100 border-top border-bottom border-dark ">
+              <div className="m-auto w-50 text-center category d-flex justify-content-between py-3">
+                <Link to="/article1">
+                  <div className="article-category-selected-btn text-decoration-none">
+                    衛教資訊
+                  </div>
+                </Link>
+                <Link to="/article2">
+                  <div className="article-category-btn text-decoration-none">
+                    性教育
+                  </div>
+                </Link>
+
+                <Link to="/article3">
+                  <div
+                    className="article-category-btn text-decoration-none"
+                    href
+                  >
+                    性別故事
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -153,9 +164,9 @@ const ArticleIndex = () => {
           </div> */}
 
           <div className="more">
-            <a href="http://localhost:3000/articlenew ">
+            <Link to="/article/health">
               <img src="./bg-svg/more-for-category.svg" alt="" />
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -189,4 +200,4 @@ const ArticleIndex = () => {
   );
 };
 
-export default ArticleIndex;
+export default ArticleIndex1;
