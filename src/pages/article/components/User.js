@@ -5,18 +5,24 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import { withRouter } from "react-router-dom";
 
+import InfiniteScroll from "react-infinite-scroll-component";
+
 function User(props) {
   const [article, setArticle] = useState([]);
   const [dataLoading, setDataLoading] = useState(false);
+
   const [displayArticle, setDisplayArticle] = useState([]); //篩過之後的資料
   var moment = require("moment");
 
+  // 設定每次和資料庫要資料的筆數
+  const [articleLimit, setArticleLimit] = useState(5);
+
   async function getArticleFromServer() {
     // 開啟載入指示
-    setDataLoading(true);
+    //setDataLoading(true)
 
     // 連接的伺服器資料網址
-    const url = `http://localhost:6005/article?orderBy=created_at-desc`;
+    const url = `http://localhost:6005/article?orderBy=created_at-desc&limit=${articleLimit}`;
 
     // 注意header資料格式要設定，伺服器才知道是json格式
     const request = new Request(url, {
@@ -33,6 +39,9 @@ function User(props) {
     // 設定資料
     setArticle(data.data);
     setDisplayArticle(data.data);
+
+    // 每次load more後多增加 10 筆
+    setArticleLimit(articleLimit + 10);
   }
 
   async function deleteArticleFromServer(id) {
@@ -69,14 +78,14 @@ function User(props) {
   // 一開始就會開始載入資料
   useEffect(() => {
     getArticleFromServer();
-  }, []);
+  }, [getArticleFromServer]);
 
   // 每次users資料有變動就會X秒後關掉載入指示
-  useEffect(() => {
-    setTimeout(() => {
-      setDataLoading(false);
-    }, 1000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setDataLoading(false)
+  //   }, 1000)
+  // }, [])
 
   const loading = (
     <>
@@ -108,40 +117,55 @@ function User(props) {
             </Card.Title>
             <div className="d-flex justify-content-between pt-4 text-body">
               <Card.Text>Audrey Ko</Card.Text>
-              <Card.Text>2021-07-08</Card.Text>
+              <Card.Text>2021-02-03</Card.Text>
             </div>
           </Card.Body>
         </a>
       </Card>
-      {displayArticle.map((v, i) => {
-        return (
-          <Card className="m-3">
-            <a
-              href={`http://localhost:3000/articledetail/${v.id}`}
-              style={{ textDecoration: "none" }}
-            >
-              <Card.Img
-                className="w-100 "
-                style={{ height: "200px", objectFit: "cover" }}
-                src={v.articleImg}
-                // src="https://c1.staticflickr.com/5/4183/34238230142_a2a6fdb581_b.jpg"
-              />
-              <Card.Body>
-                <Card.Title className="text-left text-body">
-                  {/* 第一次使用棉條就上手！寫給妳的全方位使用教學指南 */}
-                  {v.articleName}
-                </Card.Title>
-                <div className="d-flex justify-content-between pt-4 text-body">
-                  <Card.Text>{v.articleAuthor}</Card.Text>
-                  <Card.Text>
-                    {moment(v.created_at).format("YYYY-MM-DD")}
-                  </Card.Text>
-                </div>
-              </Card.Body>
-            </a>
-          </Card>
-        );
-      })}
+      <div
+        id="scrollableDiv"
+        style={{ width: 600, height: 200, overflow: "auto" }}
+      >
+        <InfiniteScroll
+          dataLength={displayArticle.length}
+          next={getArticleFromServer}
+          hasMore={displayArticle.length > 20 ? false : true}
+          loader={loading}
+          scrollableTarget="scrollableDiv"
+        >
+          <div style={{ display: "flex", flexWrap: "wrap" }}>
+            {displayArticle.map((v, i) => {
+              return (
+                <Card className="m-3">
+                  <a
+                    href={`http://localhost:3000/articledetail/${v.id}`}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Card.Img
+                      className="w-100 "
+                      style={{ height: "200px", objectFit: "cover" }}
+                      src={v.articleImg}
+                      // src="https://c1.staticflickr.com/5/4183/34238230142_a2a6fdb581_b.jpg"
+                    />
+                    <Card.Body>
+                      <Card.Title className="text-left text-body">
+                        {/* 第一次使用棉條就上手！寫給妳的全方位使用教學指南 */}
+                        {v.articleName}
+                      </Card.Title>
+                      <div className="d-flex justify-content-between pt-4 text-body">
+                        <Card.Text>{v.articleAuthor}</Card.Text>
+                        <Card.Text>
+                          {moment(v.created_at).format("YYYY-MM-DD")}
+                        </Card.Text>
+                      </div>
+                    </Card.Body>
+                  </a>
+                </Card>
+              );
+            })}
+          </div>
+        </InfiniteScroll>
+      </div>
     </>
   );
 }

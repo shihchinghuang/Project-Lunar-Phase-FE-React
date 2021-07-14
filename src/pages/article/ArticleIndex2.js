@@ -13,6 +13,7 @@ import ArticleCarousel from "./components/ArticleCarousel.js";
 import "../../styles/global.scss";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import User from "./components/User.js";
 
 // https://react-bootstrap.github.io/components/carousel/
 // https://ithelp.ithome.com.tw/articles/10227641
@@ -174,7 +175,7 @@ const ArticleIndex2 = () => {
           {/* <ArticleCategory /> */}
           <div className="mb-5">
             {/* <App /> */}
-            <ArticleInfiniteScroll />
+            <User />
           </div>
           {/* <div className="more">
             <a href="http://localhost:3000/articlenew">

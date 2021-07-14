@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 // import LunarPhaseHeader from "../article/components/LunarPhaseHeader.js";
 import ArticleCard from "./components/ArticleCard.js";
 import App from "./components/App.js";
-import ArticleInfiniteScroll from "./components/ArticleInfiniteScroll.js";
+import User from "./components/User.js";
 // import ArticleCategory from "../article/components/ArticleCategory.js";
 import ArticleCarousel from "./components/ArticleCarousel.js";
 // import InfiniteScroll from "../article/components/InfiniteScroll.js";
@@ -21,9 +21,8 @@ import Footer from "../../components/Footer";
 const ArticleIndex1 = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="index ">
-        {/* <LunarPhaseHeader /> */}
         <ArticleCarousel />
         {/* 右邊svg開始 */}
         {/* <div className="bg-icon-1">
@@ -191,7 +190,7 @@ const ArticleIndex1 = () => {
           {/* <ArticleCategory /> */}
           <div className="mb-5">
             {/* <App /> */}
-            <ArticleInfiniteScroll />
+            <User />
           </div>
           {/* <div className="more">
             <a href="http://localhost:3000/articlenew">
