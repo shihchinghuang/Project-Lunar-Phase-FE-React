@@ -12,6 +12,9 @@ import { AiOutlineInstagram } from "react-icons/ai";
 
 import { withRouter } from "react-router-dom";
 
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+
 const ArticleDetail = (props) => {
   console.log(props);
   var moment = require("moment");
@@ -92,6 +95,8 @@ const ArticleDetail = (props) => {
     <>
       {/* <Navi /> */}
       <div>
+        <Navbar />
+
         <ProgressBar height="15px" bgcolor="#FDD2BB" />
 
         <div className=" title-svg">
@@ -171,6 +176,7 @@ const ArticleDetail = (props) => {
       <div className="container">
         <TodoApp />
       </div>
+      <Footer />
     </>
   );
 };

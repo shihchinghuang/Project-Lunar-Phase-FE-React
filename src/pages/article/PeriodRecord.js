@@ -8,6 +8,8 @@ import "./PeriodRecord.css";
 
 import "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 export const API_HOST = "http://localhost:3000";
 export const API_GET_DATA = `${API_HOST}/posts/1`;
@@ -44,6 +46,8 @@ const Home = () => {
 
   return (
     <>
+      <Navbar />
+
       <div className="app mx-auto">
         <Edit add={setData} submittingStatus={submittingStatus} />
         <List
@@ -52,6 +56,7 @@ const Home = () => {
           submittingStatus={submittingStatus}
         />
       </div>
+      <Footer />
     </>
   );
 };

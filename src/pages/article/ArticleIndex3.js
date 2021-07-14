@@ -3,6 +3,7 @@ import "./articleIndex.scss";
 import "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
+import ArticleInfiniteScroll from "./components/ArticleInfiniteScroll.js";
 
 // import LunarPhaseHeader from "../article/components/LunarPhaseHeader.js";
 import ArticleCard from "./components/ArticleCard.js";
@@ -11,6 +12,8 @@ import App from "./components/App.js";
 import ArticleCarousel from "./components/ArticleCarousel.js";
 // import InfiniteScroll from "../article/components/InfiniteScroll.js";
 import "../../styles/global.scss";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 // https://react-bootstrap.github.io/components/carousel/
 // https://ithelp.ithome.com.tw/articles/10227641
@@ -18,6 +21,8 @@ import "../../styles/global.scss";
 const ArticleIndex3 = () => {
   return (
     <>
+      <Navbar />
+
       <div className="index ">
         {/* <LunarPhaseHeader /> */}
         <ArticleCarousel />
@@ -168,7 +173,8 @@ const ArticleIndex3 = () => {
           {/* <InfiniteScroll /> */}
           {/* <ArticleCategory /> */}
           <div className="mb-5">
-            <App />
+            {/* <App /> */}
+            <ArticleInfiniteScroll />
           </div>
           {/* <div className="more">
             <a href="http://localhost:3000/articlenew">
@@ -178,6 +184,7 @@ const ArticleIndex3 = () => {
         </div>
         {/* 第二頁最新文章區塊結束 */}
       </div>
+      <Footer />
     </>
   );
 };

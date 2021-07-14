@@ -3,10 +3,14 @@ import "./articleHealth.scss";
 import ArticleCard from "./components/ArticleCard.js";
 // import ArticleLabelSa from "./components/ArticleLabelSa.js";
 import { Link } from "react-router-dom";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
 const ArticleHealth = () => {
   return (
     <>
+      <Navbar />
+
       <div className="container pt-5">
         {/* <div className="new-new text-center  mt-5">
           <h3 className="">｜分類文章｜</h3>
@@ -155,6 +159,7 @@ const ArticleHealth = () => {
         </div>
         {/* </div> */}
       </div>
+      <Footer />
     </>
   );
 };
