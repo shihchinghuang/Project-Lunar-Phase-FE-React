@@ -8,7 +8,7 @@ function TodoAddForm(props) {
     <>
       <div className="publisher w-25 d-flex">
         <img
-          src="http://localhost:3000/img/Article/Maruko.jpeg"
+          src="http://localhost:3333/img/Article/Maruko.jpeg"
           className="w-25 rounded-circle"
           alt="avator"
         />
@@ -26,14 +26,16 @@ function TodoAddForm(props) {
           }
         }}
       />
-      <button
-        onClick={() => {
-          handleAddNew(todoInput);
-        }}
-        className="m-4 btn-soft-green-s"
-      >
-        我要留言
-      </button>
+      <div className="d-flex justify-content-center">
+        <button
+          onClick={() => {
+            handleAddNew(todoInput);
+          }}
+          className="my-4  text-center btn-soft-green-s"
+        >
+          我要留言
+        </button>
+      </div>
     </>
   );
 }

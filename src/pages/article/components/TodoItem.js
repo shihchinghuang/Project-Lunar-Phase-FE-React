@@ -3,8 +3,6 @@ import "react-bootstrap";
 import { BiEdit } from "react-icons/bi";
 import { AiOutlineDelete } from "react-icons/ai";
 import { FcLike } from "react-icons/fc";
-// React Icons
-// import { ArticleLikeBtn } from './ArticleLikeBtn.js'
 
 function TodoItem(props) {
   const {
@@ -21,7 +19,7 @@ function TodoItem(props) {
     <>
       <div className="publisher w-25 d-flex pb-4">
         <img
-          src="http://localhost:3000/img/Article/Maruko.jpeg"
+          src="http://localhost:3333/img/Article/Maruko.jpeg"
           className="w-25 rounded-circle"
           alt="avator"
         />
@@ -69,7 +67,6 @@ function TodoItem(props) {
           />
           <p>{total}</p>
         </div>
-        {/* <ArticleLikeBtn /> */}
       </div>
     </>
   );

@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-
+import React from "react";
 import { render } from "react-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
 import "react-bootstrap";

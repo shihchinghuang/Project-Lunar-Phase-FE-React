@@ -3,16 +3,10 @@ import "./articleIndex.scss";
 import "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
-import ArticleInfiniteScroll from "./components/ArticleInfiniteScroll.js";
-
-// import LunarPhaseHeader from "../article/components/LunarPhaseHeader.js";
-import ArticleCard from "./components/ArticleCard.js";
 import App from "./components/App.js";
-// import ArticleCategory from "../article/components/ArticleCategory.js";
 import ArticleCarousel from "./components/ArticleCarousel.js";
-// import InfiniteScroll from "../article/components/InfiniteScroll.js";
 import "../../styles/global.scss";
-import Navbar from "../../components/Navbar";
+import LunarPhaseNavbar from "../../components/LunarPhaseNavbar";
 import Footer from "../../components/Footer";
 
 // https://react-bootstrap.github.io/components/carousel/
@@ -21,24 +15,18 @@ import Footer from "../../components/Footer";
 const ArticleIndex3 = () => {
   return (
     <>
-      <Navbar />
-
+      <LunarPhaseNavbar />
       <div className="index ">
-        {/* <LunarPhaseHeader /> */}
         <ArticleCarousel />
-        {/* 右邊svg開始 */}
-        {/* <div className="bg-icon-1">
-          <img src="./bg-svg/Group 965.svg" alt="" />
-        </div> */}
-        {/*右邊svg結束 */}
         <img
-          src="./bg-svg/wave.svg"
+          src="http://localhost:3333/img/Article/wave.svg"
           style={{
             width: "100%",
             position: "absolute",
-            top: "600px",
+            top: "700px",
             right: "0px",
             zIndex: "-1",
+            opacity: "0.8",
           }}
           alt=""
           className="w-100  mt-5"
@@ -77,8 +65,8 @@ const ArticleIndex3 = () => {
           </div>
           <div className="container d-flex m-auto border-top border-dark">
             <div className="col-4 border-right border-dark  mt-3">
-              <a
-                href="http://localhost:3000/article/detail/23"
+              <Link
+                to="article/detail/23"
                 style={{ textDecoration: "none", color: "black" }}
               >
                 <div className="article-card-hover">
@@ -98,11 +86,11 @@ const ArticleIndex3 = () => {
                     </div>
                   </div>
                 </div>
-              </a>
+              </Link>
             </div>
             <div className="col-4 border-right border-dark mt-3">
-              <a
-                href="http://localhost:3000/article/detail/46"
+              <Link
+                to="/detail/46"
                 style={{ textDecoration: "none", color: "black" }}
               >
                 <div className="article-card-hover">
@@ -122,11 +110,11 @@ const ArticleIndex3 = () => {
                     </div>
                   </div>
                 </div>
-              </a>
+              </Link>
             </div>
             <div className="col-4 mt-3">
-              <a
-                href="http://localhost:3000/article/detail/44"
+              <Link
+                to="/article/detail/44"
                 style={{ textDecoration: "none", color: "black" }}
               >
                 <div className="article-card-hover">
@@ -146,13 +134,16 @@ const ArticleIndex3 = () => {
                     </div>
                   </div>
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
 
           <div className="more">
             <Link to="/article/health">
-              <img src="./bg-svg/more-for-category.svg" alt="" />
+              <img
+                src="http://localhost:3333/img/Article/more-for-category.svg"
+                alt=""
+              />
             </Link>
           </div>
         </div>
@@ -162,7 +153,11 @@ const ArticleIndex3 = () => {
           <div className="new mb-5">
             <h3 className="">｜最新文章｜</h3>
             <div className="mb-3 text-center">
-              <img className="w-75" src="./bg-svg/Path 549.svg" alt="" />
+              <img
+                className="w-75"
+                src="http://localhost:3333/img/Article/Path 549.svg"
+                alt=""
+              />
             </div>
             <div className="w-100 text-center">
               <small>
@@ -170,17 +165,9 @@ const ArticleIndex3 = () => {
               </small>
             </div>
           </div>
-          {/* <InfiniteScroll /> */}
-          {/* <ArticleCategory /> */}
           <div className="mb-5">
-            {/* <App /> */}
-            <ArticleInfiniteScroll />
+            <App />
           </div>
-          {/* <div className="more">
-            <a href="http://localhost:3000/articlenew">
-              <img src="./bg-svg/more-for-new.svg" alt="" />
-            </a>
-          </div> */}
         </div>
         {/* 第二頁最新文章區塊結束 */}
       </div>

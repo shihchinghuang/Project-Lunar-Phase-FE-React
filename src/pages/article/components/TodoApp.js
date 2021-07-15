@@ -158,7 +158,7 @@ function TodoApp() {
       />
       <div className="position-relative text-center">
         <img
-          src="http://localhost:3000/bg-svg/Path 539.svg"
+          src="http://localhost:3333/img/Article/Path 539.svg"
           className="line3  w-50 position-absolute"
           alt=""
         />

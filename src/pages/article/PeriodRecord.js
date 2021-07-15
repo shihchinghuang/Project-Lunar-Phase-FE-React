@@ -1,17 +1,14 @@
 import { useState, useEffect, useRef } from "react";
-// import {API_GET_DATA} from '../../global/constants.js'
-
 import React from "react";
 import List from "../article/components/List.js";
 import Edit from "../article/components/Edit.js";
 import "./PeriodRecord.css";
-
 import "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from "../../components/Navbar";
+import LunarPhaseNavbar from "../../components/LunarPhaseNavbar";
 import Footer from "../../components/Footer";
 
-export const API_HOST = "http://localhost:3000";
+export const API_HOST = "http://localhost:3333";
 export const API_GET_DATA = `${API_HOST}/posts/1`;
 
 async function fetchData(setData) {
@@ -46,7 +43,7 @@ const Home = () => {
 
   return (
     <>
-      <Navbar />
+      <LunarPhaseNavbar />
 
       <div className="app mx-auto">
         <Edit add={setData} submittingStatus={submittingStatus} />

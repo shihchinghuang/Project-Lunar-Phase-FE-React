@@ -34,11 +34,6 @@
 		z-index: -1;
 	}
 }
-.carousel {
-	// width: 72.3%;
-	// margin-right: 0;
-	// float: left;
-}
 
 .new {
 	width: fit-content;
@@ -67,8 +62,12 @@
 }
 .more {
 	width:200px;
-margin-top: -50px;
-	margin-left:auto;
+margin-top: -30px;
+	margin-left:  1000px;;
+	margin-bottom: 80px;
+	img{
+		width:280px;
+	}
 }
 .category {
 	width: fit-content;
@@ -87,10 +86,7 @@ margin-top: -50px;
 }
 
 /* ---article--- */
-.index-article {
-	/* height: 900px; */
-	/* padding: 120px 140px; */
-  }
+
   .index-article-header {
 	border-bottom: 2px solid #383844;
   }

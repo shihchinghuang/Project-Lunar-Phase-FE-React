@@ -1,8 +1,8 @@
 import React from "react";
-// import './articleDetail.scss'
-// import $ from 'jquery'
 import Carousel from "react-bootstrap/Carousel";
 import "./articleCarousel.scss";
+import { Link } from "react-router-dom";
+
 // https://react-bootstrap.github.io/components/carousel/
 
 function ArticleCarousel() {
@@ -11,7 +11,7 @@ function ArticleCarousel() {
       {/* <div className="container"> */}
       <Carousel>
         <Carousel.Item>
-          <a href="http://localhost:3000/articledetail/2">
+          <Link to="/article/detail/2">
             <img
               className="d-block w-100"
               style={{
@@ -27,10 +27,10 @@ function ArticleCarousel() {
                 女人生命中長時間相伴的「好朋友」，三種友善地球的永續生理期用品
               </h3>
             </Carousel.Caption>
-          </a>
+          </Link>
         </Carousel.Item>
         <Carousel.Item>
-          <a href="http://localhost:3000/articledetail/39">
+          <Link to="/article/detail/39">
             <img
               className="d-block w-100"
               style={{
@@ -46,24 +46,24 @@ function ArticleCarousel() {
                 瑞典學校性平教育將強化認知「合意文化」，不把性騷擾「正常化」
               </h3>
             </Carousel.Caption>
-          </a>
+          </Link>
         </Carousel.Item>
         <Carousel.Item>
-          <a href="http://localhost:3000/articledetail/41">
+          <Link to="/article/detail/41">
             <img
               className="d-block w-100"
               style={{
                 height: "600px",
                 objectFit: "cover",
               }}
-              src="https://heho.com.tw/wp-content/uploads/2019/10/191005-%E7%94%9F%E7%90%86%E6%9C%9F%E7%94%A8%E5%93%81.png"
+              src="https://images.pexels.com/photos/6590828/pexels-photo-6590828.jpeg"
               alt="Third slide"
             />
 
             <Carousel.Caption className="title">
               <h3 className="">衛生棉、棉條還是月亮杯？優缺點超級比一比！</h3>
             </Carousel.Caption>
-          </a>
+          </Link>
         </Carousel.Item>
       </Carousel>
       {/* </div> */}

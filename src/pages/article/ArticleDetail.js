@@ -8,11 +8,8 @@ import ProgressBar from "react-scroll-progress-bar";
 import { RiBookmarkFill } from "react-icons/ri";
 import { TiSocialFacebook } from "react-icons/ti";
 import { AiOutlineInstagram } from "react-icons/ai";
-// import Navi from "./components/Navi.js";
-
 import { withRouter } from "react-router-dom";
-
-import Navbar from "../../components/Navbar";
+import LunarPhaseNavbar from "../../components/LunarPhaseNavbar";
 import Footer from "../../components/Footer";
 
 const ArticleDetail = (props) => {
@@ -46,7 +43,7 @@ const ArticleDetail = (props) => {
 
     // 連接的伺服器資料網址
     const id = props.match.params.id;
-    const url = "http://localhost:6005/article/" + id;
+    const url = "http://localhost:4567/article/" + id;
 
     // const url = "http://localhost:6005/article/:id?";
 
@@ -93,13 +90,10 @@ const ArticleDetail = (props) => {
 
   return (
     <>
-      {/* <Navi /> */}
       <div>
-        <Navbar />
-
+        <LunarPhaseNavbar />
         <ProgressBar height="15px" bgcolor="#FDD2BB" />
-
-        <div className=" title-svg">
+        <div className="title-svg">
           <div className="text-center pt-5 mt-5">
             <h3>{article.articleName}</h3>
           </div>
@@ -132,14 +126,17 @@ const ArticleDetail = (props) => {
               dangerouslySetInnerHTML={{ __html: article.articleContent0 }}
             ></p>
             <div className="highlight mx-auto text-center my-5">
-              <img src="http://localhost:3000/bg-svg/Group 1120.png" alt="" />
+              <img
+                src="http://localhost:3333/img/Article/Group 1120.png"
+                alt=""
+              />
               <p className="">{article.articleHighlight}</p>
             </div>
             <p
               dangerouslySetInnerHTML={{ __html: article.articleContent1 }}
             ></p>
             <img
-              src="http://localhost:3000/bg-svg/Path 534.svg"
+              src="http://localhost:3333/img/Article/Path 534.svg"
               className="line"
               alt=""
             />
@@ -148,7 +145,7 @@ const ArticleDetail = (props) => {
               dangerouslySetInnerHTML={{ __html: article.articleContent2 }}
             ></p>
             <img
-              src="http://localhost:3000/bg-svg/Path 536.svg"
+              src="http://localhost:3333/img/Article/Path 536.svg"
               className="line2"
               alt=""
             />

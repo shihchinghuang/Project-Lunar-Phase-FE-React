@@ -48,7 +48,7 @@ const Edit = ({ add, submittingStatus }) => {
 
             // backgroundColor: "#FDD2BB",
           }}
-          src="http://localhost:3000/img/Article/Intersection1.svg"
+          src="http://localhost:3333/img/Article/Intersection1.svg"
           alt=""
         />
       </div>

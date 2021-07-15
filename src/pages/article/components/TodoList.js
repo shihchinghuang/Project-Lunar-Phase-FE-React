@@ -33,7 +33,7 @@ function TodoList(props) {
 
     // 連接的伺服器資料網址
     const id = props.match.params.id;
-    const url = "http://localhost:6005/articlecomment/" + id;
+    const url = "http://localhost:4567/articlecomment/" + id;
     // const url = "http://localhost:6005/article/:id?";
 
     // 注意header資料格式要設定，伺服器才知道是json格式

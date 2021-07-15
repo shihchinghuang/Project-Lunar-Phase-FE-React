@@ -1,21 +1,22 @@
 import React from "react";
 import "react-bootstrap";
 import "./articleCarousel.scss";
+import { Link } from "react-router-dom";
 
 const ArticleCard = () => {
   return (
     <>
       <div className="container d-flex m-auto border-top border-dark">
-        <div className="col-4 border-right border-dark  mt-3">
-          <a
-            href="http://localhost:3000/article/detail/35"
+        <div className="col-4  border-right border-dark  mt-3">
+          <Link
+            to="/article/detail/35"
             style={{ textDecoration: "none", color: "black" }}
           >
             <div className="article-card-hover">
               <img
                 className=" w-100 mb-3"
                 style={{ height: "230px", objectFit: "cover" }}
-                src="https://image1.thenewslens.com/2020/11/7l6wfj58259t97nyo418ydjummny89.jpg"
+                src="https://images.pexels.com/photos/3958518/pexels-photo-3958518.jpeg"
                 alt=""
               />
               <div className="title-wrap w-100">
@@ -28,18 +29,18 @@ const ArticleCard = () => {
                 </div>
               </div>
             </div>
-          </a>
+          </Link>
         </div>
         <div className="col-4 border-right border-dark mt-3">
-          <a
-            href="http://localhost:3000/article/detail/24"
+          <Link
+            to="/article/detail/24"
             style={{ textDecoration: "none", color: "black" }}
           >
             <div className="article-card-hover">
               <img
                 className=" w-100  mb-3"
                 style={{ height: "230px", objectFit: "cover" }}
-                src="https://castle.womany.net/images/content/pictures/33702/womany_mooncup_1441783172-29443-5169.jpg"
+                src="https://images.unsplash.com/photo-1607185073253-44296286cd82"
                 alt=""
               />
               <div className="title-wrap w-100">
@@ -52,11 +53,11 @@ const ArticleCard = () => {
                 </div>
               </div>
             </div>
-          </a>
+          </Link>
         </div>
         <div className="col-4 mt-3">
-          <a
-            href="http://localhost:3000/article/detail/48"
+          <Link
+            to="/article/detail/48"
             style={{ textDecoration: "none", color: "black" }}
           >
             <div className="article-card-hover">
@@ -74,89 +75,10 @@ const ArticleCard = () => {
                 </div>
               </div>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
-      {/* <CardDeck className="container m-auto">
-        <Card className="col-4">
-          <a
-            href="http://localhost:3000/articledetail/35"
-            style={{ textDecoration: "none" }}
-          >
-            <Card.Img
-              className="w-100 mt-3"
-              style={{ height: "170px", objectFit: "cover" }}
-              src="https://image1.thenewslens.com/2020/11/7l6wfj58259t97nyo418ydjummny89.jpg"
-            />
-            <Card.Body>
-              <Card.Title className="text-left text-body">
-                第一次使用棉條就上手！寫給妳的全方位使用教學指南
-              </Card.Title>
-              <div className="d-flex justify-content-between pt-4 text-body">
-                <Card.Text>Audrey Ko</Card.Text>
-                <Card.Text>2021-02-03</Card.Text>
-              </div>
-            </Card.Body>
-          </a>
-        </Card>
-
-        <Card className="col-4">
-          <a
-            href="http://localhost:3000/articledetail/24"
-            style={{ textDecoration: "none" }}
-          >
-            <Card.Img
-              className="w-100 mt-3"
-              style={{ height: "170px", objectFit: "cover" }}
-              src="https://castle.womany.net/images/content/pictures/33702/womany_mooncup_1441783172-29443-5169.jpg"
-            />
-            <Card.Body>
-              <Card.Title className="text-left text-body">
-                給你的寵愛身體懶人包：第一次月亮杯就上手
-              </Card.Title>
-              <div className="d-flex justify-content-between pt-4 text-body">
-                <Card.Text>慢慢說</Card.Text>
-                <Card.Text>2021-06-14</Card.Text>
-              </div>
-            </Card.Body>
-          </a>
-        </Card>
-
-        <Card className="col-4">
-          <a
-            href="http://localhost:3000/articledetail/28"
-            style={{ textDecoration: "none" }}
-          >
-            <Card.Img
-              className="w-100  mt-3"
-              style={{ height: "170px", objectFit: "cover" }}
-              src="https://pbs.twimg.com/media/EnoBjg2W8AU_U47?format=jpg&name=large"
-            />
-            <Card.Body>
-              <Card.Title className="text-left text-body">
-                讓「月經貧窮」走入歷史，蘇格蘭議會獨步全球通過「生理用品免費法案」
-              </Card.Title>
-              <div className="d-flex justify-content-between text-body">
-                <Card.Text>中央社</Card.Text>
-                <Card.Text>2021-05-13</Card.Text>
-              </div>
-            </Card.Body>
-          </a>
-        </Card>
-      </CardDeck> */}
     </>
   );
 };
 export default ArticleCard;
-
-// <div className="card">
-// <img src="./img/t1xuywcar96sxqjympzodashc5g96t.jpeg" className="card-img-top" alt="..." />
-// <div className="card-body">
-//   <h5 className=" card-title"></h5>
-//   <div className="author-date-index d-flex">
-//     <small className="text-muted ">團隊</small>
-//     <small className="text-muted">2021-04-23</small>
-//   </div>
-// </div>
-// </div>
-// <div className="card">
