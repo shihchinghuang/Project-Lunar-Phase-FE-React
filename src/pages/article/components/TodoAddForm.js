@@ -1,8 +1,21 @@
 import React from "react";
 import "react-bootstrap";
+import Swal from "sweetalert2";
 
 function TodoAddForm(props) {
   const { todoInput, setTodoInput, handleAddNew } = props;
+
+  const alertCheck = () => {
+    Swal.fire({
+      position: "center",
+      // icon: 'question',
+      width: "30%",
+      imageUrl: "http://localhost:3333/img/Article/1103-confetti-outline.gif",
+      text: "留言成功！",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  };
 
   return (
     <>
@@ -30,6 +43,7 @@ function TodoAddForm(props) {
         <button
           onClick={() => {
             handleAddNew(todoInput);
+            alertCheck();
           }}
           className="my-4  text-center btn-soft-green-s"
         >

@@ -11,6 +11,7 @@ import { AiOutlineInstagram } from "react-icons/ai";
 import { withRouter } from "react-router-dom";
 import LunarPhaseNavbar from "../../components/LunarPhaseNavbar";
 import Footer from "../../components/Footer";
+import { Link } from "react-router-dom";
 
 const ArticleDetail = (props) => {
   console.log(props);
@@ -137,36 +138,38 @@ const ArticleDetail = (props) => {
             </div>
           </div>
           <div className="content">
-            <div
-              style={{
-                position: "fixed",
-                top: "400px",
-                left: "30px",
-                width: "120px",
-                height: "120px",
-                zIndex: "-1",
-              }}
-            >
-              <img
-                src="http://localhost:3333/img/Article/mc02-00.jpg"
-                alt=""
+            <Link to="/product">
+              <div
                 style={{
-                  borderRadius: "50%",
-                  objectFit: "cover",
+                  position: "fixed",
+                  top: "400px",
+                  left: "30px",
                   width: "120px",
                   height: "120px",
-                }}
-              />
-              <h6
-                className="text-center"
-                style={{
-                  fontFamily: "'DM Serif Display', serif",
-                  color: "#E64B4B",
+                  cursor: "pointer",
+                  zIndex: "-1",
                 }}
               >
-                - 盈月杯新上市 -<small>專為亞洲女性設計</small>
-              </h6>
-            </div>
+                <img
+                  src="http://localhost:3333/img/Article/mc02-00.jpg"
+                  alt=""
+                  style={{
+                    borderRadius: "50%",
+                    objectFit: "cover",
+                    width: "120px",
+                    height: "120px",
+                  }}
+                />
+                <h6
+                  className="text-center"
+                  style={{
+                    fontFamily: "'DM Serif Display', serif",
+                  }}
+                >
+                  - 盈月杯新上市 -<small>專為亞洲女性設計</small>
+                </h6>
+              </div>
+            </Link>
             <p
               dangerouslySetInnerHTML={{ __html: article.articleContent0 }}
             ></p>

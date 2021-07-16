@@ -3,6 +3,7 @@ import "react-bootstrap";
 import { BiEdit } from "react-icons/bi";
 import { AiOutlineDelete } from "react-icons/ai";
 import { FcLike } from "react-icons/fc";
+import Swal from "sweetalert2";
 
 function TodoItem(props) {
   const {
@@ -14,6 +15,18 @@ function TodoItem(props) {
   } = props;
 
   const [total, setTotal] = useState(0);
+
+  const alertCheck = () => {
+    Swal.fire({
+      position: "center",
+      // icon: 'question',
+      width: "30%",
+      imageUrl: "http://localhost:3333/img/Article/1103-confetti-outline.gif",
+      text: "刪除成功！",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  };
 
   return (
     <>
@@ -54,6 +67,7 @@ function TodoItem(props) {
               className="h3"
               onClick={() => {
                 handleDelete(todoItem.id);
+                alertCheck();
               }}
             />
           </div>
