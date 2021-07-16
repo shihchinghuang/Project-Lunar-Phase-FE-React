@@ -90,13 +90,19 @@ const ArticleDetail = (props) => {
 
   return (
     <>
+      <LunarPhaseNavbar />
+
       <div>
-        <LunarPhaseNavbar />
-        <ProgressBar height="15px" bgcolor="#FDD2BB" />
         <div className="title-svg">
           <div className="text-center pt-5 mt-5">
             <h3>{article.articleName}</h3>
           </div>
+          <ProgressBar
+            height="130px"
+            bgcolor="#FDD2BB"
+            style={{ marginTop: "300px" }}
+          />
+
           <img
             src={article.articleImg}
             className="w-100"
@@ -116,9 +122,18 @@ const ArticleDetail = (props) => {
               </p>
             </div>
             <div className="mr-4">
-              <RiBookmarkFill className="h4 mr-4" />
-              <TiSocialFacebook className="h3 mr-4" />
-              <AiOutlineInstagram className="h3 mr-4" />
+              <RiBookmarkFill
+                className="h4 mr-4"
+                style={{ cursor: "pointer" }}
+              />
+              <TiSocialFacebook
+                className="h3 mr-4"
+                style={{ cursor: "pointer" }}
+              />
+              <AiOutlineInstagram
+                className="h3 mr-4"
+                style={{ cursor: "pointer" }}
+              />
             </div>
           </div>
           <div className="content">
@@ -169,7 +184,6 @@ const ArticleDetail = (props) => {
           <ArticleCard />
         </div>
       </div>
-
       <div className="container">
         <TodoApp />
       </div>

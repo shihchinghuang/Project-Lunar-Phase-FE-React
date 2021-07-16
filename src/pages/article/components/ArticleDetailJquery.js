@@ -68,9 +68,18 @@ function ArticleDetailJquery() {
             <AiOutlineFontSize className="font jq-small h5"/>
 <hr /> */}
 
-      <AiOutlineFontColors className="font jq-large h1 mr-4" />
-      <AiOutlineFontColors className="font jq-medium h3 mr-4" />
-      <AiOutlineFontColors className="font jq-small h5" />
+      <AiOutlineFontColors
+        className="font jq-large h1 mr-4"
+        style={{ cursor: "pointer" }}
+      />
+      <AiOutlineFontColors
+        className="font jq-medium h3 mr-4"
+        style={{ cursor: "pointer" }}
+      />
+      <AiOutlineFontColors
+        className="font jq-small h5"
+        style={{ cursor: "pointer" }}
+      />
     </>
   );
 }
