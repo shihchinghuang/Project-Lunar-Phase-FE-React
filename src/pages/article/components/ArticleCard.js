@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 const ArticleCard = () => {
   return (
     <>
-      <div className="container d-flex m-auto border-top border-dark">
-        <div className="article-card-col-4 col-4  border-right border-dark  mt-3">
+      <div className="container row d-flex m-auto">
+        <div className="article-card-col-4 col-12 col-md-6 col-lg-4  mt-3">
           <Link
             to="/article/detail/35"
             style={{ textDecoration: "none", color: "black" }}
@@ -20,7 +20,7 @@ const ArticleCard = () => {
                 alt=""
               />
               <div className="w-100">
-                <h5 className="mb-4">
+                <h5 className="mb-4 text-left">
                   第一次使用棉條就上手！寫給妳的全方位使用教學指南
                 </h5>
                 <div className="d-flex justify-content-between w-100">
@@ -31,7 +31,7 @@ const ArticleCard = () => {
             </div>
           </Link>
         </div>
-        <div className="article-card-col-4 col-4 border-right border-dark mt-3">
+        <div className="article-card-col-4 col-12 col-md-6 col-lg-4 mt-3">
           <Link
             to="/article/detail/24"
             style={{ textDecoration: "none", color: "black" }}
@@ -44,7 +44,7 @@ const ArticleCard = () => {
                 alt=""
               />
               <div className="w-100">
-                <h5 className="mb-4">
+                <h5 className="mb-4 text-left">
                   給你的寵愛身體懶人包：第一次月亮杯就上手
                 </h5>
                 <div className="d-flex justify-content-between w-100">
@@ -55,7 +55,7 @@ const ArticleCard = () => {
             </div>
           </Link>
         </div>
-        <div className="article-card-col-4 col-4 mt-3">
+        <div className="article-card-col-12 col-12 col-md-6 col-lg-4  mt-3">
           <Link
             to="/article/detail/48"
             style={{ textDecoration: "none", color: "black" }}
@@ -68,7 +68,9 @@ const ArticleCard = () => {
                 alt=""
               />
               <div className="w-100">
-                <h5 className="mb-4">新種月事用品　溫柔對待你的「好朋友」</h5>
+                <h5 className="mb-4 text-left">
+                  新種月事用品　溫柔對待你的「好朋友」
+                </h5>
                 <div className="d-flex justify-content-between w-100">
                   <p>林以璿</p>
                   <p>2021-06-07</p>
