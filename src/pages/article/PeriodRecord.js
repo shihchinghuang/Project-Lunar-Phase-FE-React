@@ -45,7 +45,7 @@ const Home = () => {
     <>
       <LunarPhaseNavbar />
 
-      <div className="app mx-auto">
+      <div className="period-record mx-auto">
         <Edit add={setData} submittingStatus={submittingStatus} />
         <List
           listData={data}

@@ -1,10 +1,10 @@
 import React from "react";
 import Item from "./Item";
 
-const List = ({ listData, deleteData,submittingStatus }) => {
+const List = ({ listData, deleteData, submittingStatus }) => {
   return (
     <>
-      <div className="list">
+      <div className="period-record-list">
         {listData.map((item) => {
           const { dateS, dateE, note, id } = item;
           return (
@@ -22,6 +22,6 @@ const List = ({ listData, deleteData,submittingStatus }) => {
       </div>
     </>
   );
-}; 
+};
 
 export default List;

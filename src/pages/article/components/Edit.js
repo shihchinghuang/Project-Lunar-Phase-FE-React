@@ -58,7 +58,7 @@ const Edit = ({ add, submittingStatus }) => {
             <p className="mt-4">開始日期</p>
             <input
               type="date"
-              className="input w-100"
+              className="period-record-input w-100"
               value={dateS}
               onChange={dateSChange}
             />
@@ -83,7 +83,7 @@ const Edit = ({ add, submittingStatus }) => {
           onChange={noteChange}
         />
 
-        <button onClick={addItem} className="add mt-5">
+        <button onClick={addItem} className="period-record-add mt-5">
           送出
         </button>
       </div>
