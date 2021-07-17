@@ -1,13 +1,8 @@
 @import '~bootstrap/scss/bootstrap.scss';
 @import '../../styles/global.scss';
 
-
-body 
-{
-
-
-.title-svg{
-    h3{
+.article-detail-title{
+    .article-detail-title-h3{
     border-bottom: #FDD2BB 5px solid;
     border-top: #FDD2BB 5px solid;
     width: 80%;
@@ -18,13 +13,11 @@ margin-bottom: 50px;
     line-height: 1.8;
 
 }
-img{
+.article-detail-title-img{
     width: 100%;
-
-    object-fit: cover;
 }
 }
-        .author-date {
+        .article-detail-author-date {
             // margin: auto;
             width:fit-content;
             // position: absolute;
@@ -34,21 +27,21 @@ img{
             padding: 15px 30px;
         }
 
-        .content{
+        .article-detail-content{
             
-            p {
+            .article-detail-content-p {
             padding: 20px;
             text-align: left;
             /* letter-spacing: 1.5px; */
             line-height: 28px;
             /* font-size: 20px; */
         }
-        .line{
+        .aritcle-detail-line{
             position: absolute;
             left: 0;
             width: 500px;
         }
-        .line2{
+        .aritcle-detail-line2{
             position: absolute;
             right: 0;
             width: 300px;
@@ -56,20 +49,16 @@ img{
         }
         } 
 
-        .content 
-
-        .highlight {
+        .article-detail-highlight {
             position: relative;
-            img{
+            .article-detail-highlight-img{
                 width: 800px;
                 height: 250px;
             }
-            p {
+            .article-detail-highlight-p {
                 position: absolute;
                 width: 600px;
                 top: 70px;
                 right: 250px;
             }
         }
-    }
-    

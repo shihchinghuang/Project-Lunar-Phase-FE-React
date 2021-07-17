@@ -94,9 +94,9 @@ const ArticleDetail = (props) => {
       <LunarPhaseNavbar />
 
       <div>
-        <div className="title-svg">
+        <div className="article-detail-title">
           <div className="text-center pt-5 mt-5">
-            <h3>{article.articleName}</h3>
+            <h3 className="article-detail-title-h3">{article.articleName}</h3>
           </div>
           <ProgressBar
             height="130px"
@@ -106,17 +106,49 @@ const ArticleDetail = (props) => {
 
           <img
             src={article.articleImg}
-            className="w-100"
-            style={{ height: "660px", objectFit: "cover" }}
+            className="w-100 article-detail-title-img"
+            style={{ height: "660px", objectFit: "cover", zIndex: "1000" }}
             alt=""
           />
         </div>
+        <Link to="/product">
+          <div
+            style={{
+              position: "fixed",
+              top: "400px",
+              left: "30px",
+              width: "120px",
+              height: "120px",
+              cursor: "pointer",
+              zIndex: "-1",
+            }}
+          >
+            <img
+              src="http://localhost:3333/img/Article/mc02-00.jpg"
+              alt=""
+              style={{
+                borderRadius: "50%",
+                objectFit: "cover",
+                width: "120px",
+                height: "120px",
+              }}
+            />
+            <h6
+              className="text-center"
+              style={{
+                fontFamily: "'DM Serif Display', serif",
+              }}
+            >
+              - 盈月杯新上市 -<small>專為亞洲女性設計</small>
+            </h6>
+          </div>
+        </Link>
         <div className="container ">
           <div className="d-flex justify-content-between align-items-center my-5 border-bottom pb-5">
             <div className="ml-4">
               <ArticleDetailJquery />
             </div>
-            <div className="author-date">
+            <div className="article-detail-author-date">
               <p className="m-0">
                 {article.articleAuthor}｜
                 {moment(article.articleDate).format("YYYY-MM-DD")}
@@ -137,67 +169,41 @@ const ArticleDetail = (props) => {
               />
             </div>
           </div>
-          <div className="content">
-            <Link to="/product">
-              <div
-                style={{
-                  position: "fixed",
-                  top: "400px",
-                  left: "30px",
-                  width: "120px",
-                  height: "120px",
-                  cursor: "pointer",
-                  zIndex: "-1",
-                }}
-              >
-                <img
-                  src="http://localhost:3333/img/Article/mc02-00.jpg"
-                  alt=""
-                  style={{
-                    borderRadius: "50%",
-                    objectFit: "cover",
-                    width: "120px",
-                    height: "120px",
-                  }}
-                />
-                <h6
-                  className="text-center"
-                  style={{
-                    fontFamily: "'DM Serif Display', serif",
-                  }}
-                >
-                  - 盈月杯新上市 -<small>專為亞洲女性設計</small>
-                </h6>
-              </div>
-            </Link>
+          <div className="article-detail-content">
             <p
+              className="article-detail-content-p"
               dangerouslySetInnerHTML={{ __html: article.articleContent0 }}
             ></p>
-            <div className="highlight mx-auto text-center my-5">
+            <div className="article-detail-highlight mx-auto text-center my-5">
               <img
+                className="article-detail-highlight-img"
                 src="http://localhost:3333/img/Article/Group 1120.png"
                 alt=""
               />
-              <p className="">{article.articleHighlight}</p>
+              <p className="article-detail-highlight-p">
+                {article.articleHighlight}
+              </p>
             </div>
             <p
+              className="article-detail-content-p"
               dangerouslySetInnerHTML={{ __html: article.articleContent1 }}
             ></p>
             <img
               src="http://localhost:3333/img/Article/Path 534.svg"
-              className="line"
+              className="aritcle-detail-line"
               alt=""
             />
             <p
-              className="mt-5 pt-5"
+              className="mt-5 pt-5 article-detail-content-p"
               dangerouslySetInnerHTML={{ __html: article.articleContent2 }}
             ></p>
             <img
               src="http://localhost:3333/img/Article/Path 536.svg"
-              className="line2"
+              className="aritcle-detail-line2"
               alt=""
             />
             <p
+              className="article-detail-content-p"
               dangerouslySetInnerHTML={{ __html: article.articleContent3 }}
             ></p>
           </div>

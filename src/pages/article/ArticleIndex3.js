@@ -16,7 +16,7 @@ const ArticleIndex3 = () => {
   return (
     <>
       <LunarPhaseNavbar />
-      <div className="index ">
+      <div className="article-index ">
         <ArticleCarousel />
         <img
           src="http://localhost:3333/img/Article/wave.svg"
@@ -29,7 +29,7 @@ const ArticleIndex3 = () => {
             opacity: "0.8",
           }}
           alt=""
-          className="w-100  mt-5"
+          className="w-100 mt-5"
         />
         {/* 第二頁分類文章區塊開始 */}
         <div className="container">
@@ -41,7 +41,7 @@ const ArticleIndex3 = () => {
           </div>
           <div className="container my-5">
             <div className="w-100 border-top border-bottom border-dark ">
-              <div className="m-auto w-50 text-center category d-flex justify-content-between py-3">
+              <div className="m-auto w-50 text-center article-index-category d-flex justify-content-between py-3">
                 <Link to="/article1">
                   <div className="article-category-btn text-decoration-none">
                     衛教資訊
@@ -76,7 +76,7 @@ const ArticleIndex3 = () => {
                     src="https://image1.thenewslens.com/2018/8/m9x9znxgim7vi2zgai8e9oe4smjnwq.jpg"
                     alt=""
                   />
-                  <div className="title-wrap w-100">
+                  <div className="w-100">
                     <h5 className="mb-4">
                       從意外到等待：台灣不同世代女性的初經經驗
                     </h5>
@@ -100,7 +100,7 @@ const ArticleIndex3 = () => {
                     src="https://image1.thenewslens.com/2015/05/11058746_10205532198238492_3669878460724262130_n.jpg"
                     alt=""
                   />
-                  <div className="title-wrap w-100">
+                  <div className="w-100">
                     <h5 className="mb-4">
                       有月經要多繳稅？澳洲課「棉條稅」 10萬人連署抗議
                     </h5>
@@ -124,7 +124,7 @@ const ArticleIndex3 = () => {
                     src="https://image1.thenewslens.com/2014/06/P1220386.jpg"
                     alt=""
                   />
-                  <div className="title-wrap w-100">
+                  <div className="w-100">
                     <h5 className="mb-4">
                       經期不再污名化，七年級女生用布衛生棉改變世界—棉樂悅事工坊創辦人
                     </h5>
@@ -138,11 +138,12 @@ const ArticleIndex3 = () => {
             </div>
           </div>
 
-          <div className="more">
+          <div className="article-index-more">
             <Link to="/article/health">
               <img
                 src="http://localhost:3333/img/Article/more-for-category.svg"
                 alt=""
+                className="article-index-more-img"
               />
             </Link>
           </div>
@@ -150,8 +151,8 @@ const ArticleIndex3 = () => {
 
         {/* 第三頁最新文章區塊開始 */}
         <div className="container">
-          <div className="new mb-5">
-            <h3 className="">｜最新文章｜</h3>
+          <div className="article-new mb-5">
+            <h3 className="article-new-h3">｜最新文章｜</h3>
             <div className="mb-3 text-center">
               <img
                 className="w-75"
@@ -160,7 +161,7 @@ const ArticleIndex3 = () => {
               />
             </div>
             <div className="w-100 text-center">
-              <small>
+              <small className="article-new-small">
                 我必須真正享受生命中的美好事物，因為這讓其他的不美好顯得無關緊要。
               </small>
             </div>

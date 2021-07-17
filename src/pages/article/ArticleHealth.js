@@ -11,7 +11,7 @@ const ArticleHealth = () => {
       <LunarPhaseNavbar />
 
       <div className="container pt-5">
-        <div className="index container">
+        <div className="container">
           <div className="m-auto" style={{ position: "relative" }}>
             <h3 className="text-center">｜分類文章｜</h3>
             <img
@@ -23,12 +23,12 @@ const ArticleHealth = () => {
                 zIndex: "-1",
               }}
               alt=""
-              className="w-100  mt-5"
+              className="w-100 mt-5"
             />
           </div>
           <div className="container my-5">
-            <div className="w-100 border-top border-bottom border-dark ">
-              <div className="m-auto w-50 text-center category d-flex justify-content-between p-3">
+            <div className="w-100 border-top border-bottom border-dark">
+              <div className="m-auto w-50 text-center d-flex justify-content-between p-3">
                 <Link to="/article1">
                   <div className="article-category-selected-btn text-decoration-none">
                     衛教資訊
@@ -61,7 +61,7 @@ const ArticleHealth = () => {
                     src="https://image1.thenewslens.com/2020/11/7l6wfj58259t97nyo418ydjummny89.jpg"
                     alt=""
                   />
-                  <div className="title-wrap w-100">
+                  <div className="w-100">
                     <h5 className="mb-4">
                       第一次使用棉條就上手！寫給妳的全方位使用教學指南
                     </h5>
@@ -80,12 +80,12 @@ const ArticleHealth = () => {
               >
                 <div className="article-card-hover">
                   <img
-                    className=" w-100  mb-3"
+                    className="w-100  mb-3"
                     style={{ height: "230px", objectFit: "cover" }}
                     src="https://castle.womany.net/images/content/pictures/33702/womany_mooncup_1441783172-29443-5169.jpg"
                     alt=""
                   />
-                  <div className="title-wrap w-100">
+                  <div className="w-100">
                     <h5 className="mb-4">
                       給你的寵愛身體懶人包：第一次月亮杯就上手
                     </h5>
@@ -109,7 +109,7 @@ const ArticleHealth = () => {
                     src="https://images.unsplash.com/photo-1445384763658-0400939829cd"
                     alt=""
                   />
-                  <div className="title-wrap w-100">
+                  <div className="w-100">
                     <h5 className="mb-4">
                       新種月事用品　溫柔對待你的「好朋友」
                     </h5>

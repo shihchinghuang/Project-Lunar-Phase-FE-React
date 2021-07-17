@@ -17,7 +17,7 @@ const ArticleIndex1 = () => {
   return (
     <>
       <LunarPhaseNavbar />
-      <div className="index ">
+      <div className="article-index">
         <ArticleCarousel />
         <img
           src="http://localhost:3333/img/Article/wave.svg"
@@ -42,7 +42,7 @@ const ArticleIndex1 = () => {
           </div>
           <div className="container my-5">
             <div className="w-100 border-top border-bottom border-dark ">
-              <div className="m-auto w-50 text-center category d-flex justify-content-between py-3">
+              <div className="m-auto w-50 text-center article-index-category d-flex justify-content-between py-3">
                 <Link to="/article1">
                   <div className="article-category-selected-btn text-decoration-none">
                     衛教資訊
@@ -64,11 +64,12 @@ const ArticleIndex1 = () => {
 
           <ArticleCard />
 
-          <div className="more">
+          <div className="article-index-more">
             <Link to="/article/health">
               <img
                 src="http://localhost:3333/img/Article/more-for-category.svg"
                 alt=""
+                className="article-index-more-img"
               />
             </Link>
           </div>
@@ -76,8 +77,8 @@ const ArticleIndex1 = () => {
 
         {/* 第三頁最新文章區塊開始 */}
         <div className="container">
-          <div className="new mb-5">
-            <h3 className="">｜最新文章｜</h3>
+          <div className="article-new mb-5">
+            <h3 className="article-new-h3">｜最新文章｜</h3>
             <div className="mb-3 text-center">
               <img
                 className="w-75"
@@ -86,7 +87,7 @@ const ArticleIndex1 = () => {
               />
             </div>
             <div className="w-100 text-center">
-              <small>
+              <small className="article-new-small">
                 我必須真正享受生命中的美好事物，因為這讓其他的不美好顯得無關緊要。
               </small>
             </div>
